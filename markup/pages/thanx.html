@@ -1,0 +1,33 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        <div class="first-container">
+            {{> first/first-2}}
+            {{> header/header}}
+            
+        </div>
+        {{> bread/bread-1}}
+
+
+        <div class="thanx-title">
+            Спасибо за регистрацию. Ждите одобрения!
+        </div>
+
+
+        {{> footer/footer}}
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+
+</html>

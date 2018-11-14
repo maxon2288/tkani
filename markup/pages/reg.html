@@ -1,0 +1,202 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        <div class="first-container">
+
+            {{> first/first-2}}
+            {{> header/header}}
+            
+        </div>
+        {{> bread/bread-2}}
+
+        <div class="m-content">
+            <div class="wrapper">
+                <div class="m-block p30">
+                    <form action="/" class="form-reg">
+
+                        <div class="form__wrapper">
+                            <div class="already">
+                                Уже зарегистрированы?
+                                <a href="#" class="sign__sign ml10">Войти</a>
+                            </div>
+    
+                            <div class="require form__block">
+                                
+                                <p>Электронная почта*</p>
+                                <input type="mail" name="mail" class="m-field">
+                            </div>
+    
+                            <div class="form__name">
+                                <div class="require form__block">
+                                    
+                                    <p>Фамилия*</p>
+                                    <input type="text" name="sur" class="m-field">                                
+                                </div>
+    
+                                <div class="require form__block">
+                                    
+                                    <p>Имя*</p>
+                                    <input type="text" name="name" class="m-field">
+                                </div>
+    
+                                <div class="require form__block">
+                                    <p>Отчество</p>
+                                    <input type="text" name="father" class="m-field">                            
+                                </div>
+    
+    
+                            </div>
+<!--     
+                            <div class="form__how">
+    
+                                <p class="require">Вы регистрируетесь как*</p>
+
+                                <div class="form__how-cont">
+                                    <label class="form__radio">
+                                        <input type="radio" name="check" checked>                                    
+                                        <div></div>
+                                        <p class="ml20">Частное лицо</p>
+                                    </label>
+        
+                                    <label class="form__radio">
+                                        <input type="radio" name="check" class="yur">                                    
+                                        <div></div>
+                                        <p class="ml20">Юридическое лицо</p>
+                                    </label>
+
+                                    <div class="more-input">
+                                        <div class="require form__block">
+                            
+                                            <p>Наименование организации*</p>
+                                            <input type="text" name="sur" class="m-field">                                
+                                        </div>
+            
+                                        <div class="require form__block">
+                                            
+                                            <p>ИНН организации*</p>
+                                            <input type="text" name="name" class="m-field">
+                                        </div>
+                                    </div>
+        
+                                    <label class="form__radio">
+                                        <input type="radio" name="check">                                    
+                                        <div></div>
+                                        <p class="ml20">Представитель совместных покупок</p>
+                                    </label>
+        
+                                    <label class="form__radio">
+                                        <input type="radio" name="check">                               
+                                        <div></div>
+                                        <p class="ml20">Дизайнер одежды</p>
+                                    </label>
+                                </div>  
+    
+                            </div> -->
+
+                             <div class="form__how">
+
+                                <p class="require">Вы регистрируетесь как*</p>
+
+                                <div class="form__how-cont">
+                                    <label class="form__radio">
+                                        <input type="radio" class="yur" value="chas" name="check">
+                                        <div></div>
+                                        <p class="ml20">Частное лицо</p>
+                                    </label>
+
+                                    <label class="form__radio">
+                                        <input type="radio" name="check" value="ur" class="yur">
+                                        <div></div>
+                                        <p class="ml20">Юридическое лицо</p>
+                                    </label>
+
+                                    <div class="more-input">
+                                        <div class="require form__block">
+
+                                            <p>Наименование организации*</p>
+                                            <input type="text" name="sur" class="m-field">
+                                        </div>
+
+                                        <div class="require form__block">
+                                            <p>ИНН организации*</p>
+                                            <input type="text" name="name" class="m-field">
+                                        </div>
+                                    </div>
+
+                                    <div class="more-radio">
+                                        <label class="form__radio">
+                                            <input type="radio" class="preds" value="preds" name="qwer">
+                                            <div></div>
+                                            <p class="ml20">Представитель совместных покупок</p>
+                                        </label>
+
+                                        <label class="form__radio">
+                                            <input type="radio" class="preds" value="designer" name="qwer">
+                                            <div></div>
+                                            <p class="ml20">Дизайнер одежды</p>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="more-link">
+                                <p class="links">Ссылка на сайт/группу, отображающую основной вид Вашей деятельности*</p>
+
+                                <input type="text" name="url" minlength="10" class="m-field">
+
+                                <small>В группе совместных покупок активное число пользователей 
+
+                                    должно быть не менее 500</small>
+                            </div>
+    
+                            
+    
+    
+                            <div class="form__center">
+                                <label class="form__checkbox">
+                                    <input type="checkbox" name="check">
+                                    <div><img src="%=static=%img/content/check.png" alt=""></div>
+    
+                                    <p>Настоящим подтверждаю, что я ознакомлен и согласен
+                                        с условиями политики конфиденциальности. <a href="#">Узнать больше</a> </p>
+    
+                                </label>
+    
+                                <button class="m-button">
+                                    Регистрация
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <small>Для ускорения процесса регистрации и подтверждения Вашей личности, а также удостоверения, что заявка подана не мошенниками, воспользовавшимися вашими персональными данными, 
+                            MERA рекомендует Вам написать сообщение администратору в любой из социальных сетей MERA  с вашей страницы о том, что Вы подали заявку на регистрацию на сайте mera-nn.ru.
+                        </small>
+                            
+                        <small>
+                            MERA оставляет за собой право отклонить заявку на регистрацию без объяснения причин.
+                        </small>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        
+        {{> footer/footer}}
+        
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+
+</html>

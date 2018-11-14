@@ -1,0 +1,79 @@
+.footer
+    background-image: linear-gradient( to left, rgb(38,38,98) 0%, rgb(49,90,147) 100%)
+    padding-bottom: 70px
+    padding-top: 40px
+    &__container
+        display: flex
+        width: 100%
+        flex-direction: column
+    &__copy 
+        display: flex
+        flex-direction: row
+        padding: 10px 0
+        justify-content: space-between
+        @media screen and(max-width: 375px)
+            flex-direction: column
+            align-items: center 
+    &__bottom-copy 
+        color: $pink
+        font-weight: bold
+    &__bottom-right 
+        font-weight: bold
+        color: #333
+        a 
+            color: $pink
+            font-size: 18px
+            font-weight: bold
+            &:hover 
+                text-decoration: underline  
+    &__item
+        width: 25%
+        margin-right: 35px
+        @media screen and(max-width: 1024px)
+            width: 40%
+            margin-bottom: 40px
+        @media screen and(max-width: 600px)
+            width: 100%
+            margin-right: 0
+        &-social
+            display: flex
+            flex-direction: column
+            align-items: center
+            
+    .logo__container
+        display: flex
+        justify-content: center
+    &__menu
+        margin-top: 20px
+        width: 100%
+        padding-top: 50px
+        border-top: 1px solid #fff
+        display: flex
+        justify-content: space-between
+        @media screen and(max-width: 1024px)
+            flex-wrap: wrap
+        &-link
+            display: flex
+            justify-content: stretcth
+        &-title
+            color: #fff
+            font-size: 16px
+            text-transform: uppercase
+            margin-bottom: 25px
+        a
+            padding-top: 15px
+            display: flex
+            width: 100%
+            padding-bottom: 15px
+            color: white
+            transition: 0.3s
+            color: #bcbcbc
+            border-bottom: 1px dashed #727272 
+            &:hover
+                color: #eeeeee
+                border-color: #9a9a9a 
+            svg
+                width: 20px
+                height: 20px
+                fill: #fff
+                margin-right: 10px     

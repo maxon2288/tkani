@@ -1,0 +1,65 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        <div class="first-container">
+            {{> first/first-2}}
+            {{> header/header}}
+            
+        </div>
+        
+        <div class="bread">
+                <div class="wrapper">
+                    <span>
+                        <a href="#">
+                            <span>Главная</span>
+                        </a>
+                    </span>
+            
+                    <span>
+                        {{Icon iconName="bread-arrow"}}
+                    </span>
+            
+                    <span>
+                        <a href="#">
+                            <span>Индивидуальные принты</span>
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+        <div class="m-content">
+            <div class="wrapper">
+                <div class="m-block p30">
+                    <div class="center-col">
+                        <div class="m-title">
+                            При заказе от 100кг одного полотна или 100 метров одного материала
+                            компания MERA разработает индивидульный принт для Вас.
+                        </div>
+
+
+                        <div class="custom__img">
+                            <img class="mt70 mb60 wow fadeInUp animd" src="%=static=%img/content/custom.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{> footer/footer}}
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+
+</html>

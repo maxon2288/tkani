@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        <div class="first-container">
+            {{> first/first-2}}
+            {{> header/header}}
+        </div>  
+        {{> bread/bread-2}}
+
+        <div class="m-content">
+            <div class="wrapper">
+                <div class="m-block p30">
+                    <div class="form__content">
+                        <form action="/ " class="form-sign">
+                            <div class="form__title">
+                                Авторизация на сайте
+                            </div>
+
+                            <div class="require form__block">
+                                
+                                <p>Логин*</p>
+                                <input type="mail" name="mail" class="m-field">
+                            </div>
+
+                            <div class="require form__block">
+                                
+                                <p>Пароль*</p>
+                                <input type="password" name="password" class="m-field">
+                            </div>
+
+                            <div class="form__row">
+                                <label class="form__checkbox">
+                                    <input type="checkbox" name="check">
+                                    <div><img src="%=static=%img/content/check.png" alt=""></div>
+    
+                                    <p>Запомнить меня</p>
+    
+                                </label>
+    
+                                <button class="m-button">
+                                    Продолжить
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="line"></div>
+
+                        <div class="form__right">
+                            <div class="html">
+                                <div class="form__title">Регистрация нового пользователя</div>
+
+                                <b>Удобно и легко!
+                                </b>
+
+                                <ul>
+                                    <li>Получите полный доступ к ценам 
+                                        и эксклюзивным товарам</li>
+                                    <li> Используйте введенные ранее данные</li>
+
+                                    <li>Отслеживайте статус заказа</li>
+                                    <li> Получайте уведомления </li>
+                                    <li> Сохраняйте историю заказов</li>
+                                </ul>
+
+                                <div class="link-cont-center mta">
+                                    <a href="reg.html" class="m-button">Регистрация</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{> footer/footer}}
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        <div class="first-container">
+            {{> first/first-2}}
+            {{> header/header}}
+            
+        </div>
+        
+        <div class="bread">
+                <div class="wrapper">
+                    <span>
+                        <a href="#">
+                            <span>Главная</span>
+                        </a>
+                    </span>
+            
+                    <span>
+                        {{Icon iconName="bread-arrow"}}
+                    </span>
+            
+                    <span>
+                        <a href="#">
+                            <span>Условия сотрудничества</span>
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+        <div class="m-content">
+            <div class="wrapper">
+                <div class="m-block p30 px70 jcc">
+                    <h1>lorem</h1>
+                    <h2>lorem</h2>
+                    <h3>lorem</h3>
+
+                    <b>lorem</b>
+                    <strong>lorem</strong>
+                    <a href="#">lorem</a>
+                    <p>Компания MERA является оптовым продавцом товаров и сотрудничает со следующими категориями клиентов:
+                        </p>
+                    <ul class="mb30">
+                        <li> Юридические лица, представители розничных и мелкооптовых магазинов тканей                            </li>
+                        <li> Юридические лица, представители розничных и мелкооптовых магазинов тканей                            </li>
+                        <li> Юридические лица, представители розничных и мелкооптовых магазинов тканей                            </li>
+                        <li> Юридические лица, представители розничных и мелкооптовых магазинов тканей                            </li>
+                    </ul>
+
+                    <p>Для прохождения регистрации на сайте юридические лица должны предоставить данные, подтверждающие юридический статус,
+                            а также ссылку на сайт/группу в социальных сетях на свою деятельность.</p>
+
+                    <p>Для прохождения регистрации на сайте физическим лицам, необходимо предоставить ссылку на свой сайт/ группу 
+                            в социальных сетях. Группа в социальных сетях должна быть действующая, отражать основной вид деятельности. </p>
+                    
+
+                    <p>В группе совместных закупок должно быть не менее 500 активных пользователей. 
+                        </p>
+                            
+                    
+                </div>
+            </div>
+        </div>
+
+        {{> footer/footer}}
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+
+</html>

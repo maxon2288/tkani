@@ -1,0 +1,262 @@
+.header
+    position: relative
+    z-index: 100
+    background-color: #fff
+    .drop-menu
+        position: absolute
+        top: 100%
+        left: 0
+        z-index: 100
+    &__basket 
+        transition: 0.3s 
+        position: relative
+        display: flex
+        align-items: center
+        &:hover 
+            opacity: 0.7
+    &__top
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        flex-wrap: wrap 
+        padding-top: 20px
+        margin-bottom: 74px
+        @media screen and(max-width: 600px)
+            flex-direction: column
+    &:before  
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100px
+        bottom: 100%
+        z-index: -1
+        background-image: linear-gradient( to top, #fff 0%, transparent 100%)
+    &__left
+        display: flex   
+        flex-direction: column
+        align-items: flex-start
+    &__right
+        display: flex 
+        min-width: 555px
+        @media screen and(max-width: 600px)
+            flex-wrap: wrap
+    &__link
+        font-size: 16px
+        font-family: "Segoe UI"
+        color: $graytextdark
+        text-decoration: none
+        white-space: nowrap
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            right: 0
+            height: 1px
+            background-color: $graytextdark
+            transition: 0.3s
+            width: 0
+        &:hover
+            &:before
+                width: 100%
+        img
+            margin-right: 5px
+
+    &__menu
+        display: flex
+        position: absolute
+        width: 100%
+        justify-content: space-between
+        padding: 20px 0
+        width: 100%
+        left: 50%
+        transform: translate(-50%) 
+        bottom: 0
+        background-color: #fff
+        .wrapper
+            display: flex
+            flex-direction: row
+            width: 100%
+            justify-content: space-between
+        &.fixed
+            position: fixed
+            left: 50%
+            transform: translateX(-50%)
+            top: 0
+            bottom: auto
+        .menu-open
+            height: 30px
+            display: flex
+            align-items: center
+            position: relative
+            .header__menu-toggle
+                position: absolute
+                width: 270px
+                right: 0
+                background-color: #fff
+                padding: 10px
+                top: 120%
+                display: flex
+                flex-direction: column
+                align-items: flex-end
+                box-shadow: 0 5px 20px 1px rgba(0,0,0,0.5)
+                a 
+                    margin-bottom: 5px
+                    text-align: right
+                    display: flex
+                    justify-content: flex-end
+                opacity: 0
+                visibility: hidden
+                transition: 0.3s
+                &.vis 
+                    opacity: 1
+                    visibility: visible
+    &__menu-link
+        display: flex
+        font-size: 18px
+        font-family: "Segoe UI"
+        color: rgb(0, 0, 0)
+        text-transform: uppercase
+        font-weight: 500
+        position: relative
+        display: flex
+        align-items: center
+        vertical-align: middle
+        &:before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 2px
+            background-color: #000
+            width: 0
+            transition: 0.3s
+        &:hover
+            &:before
+                width: 100%
+        @media screen and(max-width: 425px)
+            font-size: 14px
+.menu-open 
+    display: flex
+    align-items: center
+    cursor: pointer
+    align-self: center
+    svg 
+        fill: #6723cc   
+        width: 35px 
+        transition: 0.2s
+    &:hover
+        svg
+            transform: rotate(180deg)
+.search
+    display: flex
+    align-items: center
+    margin-right: 50px
+    @media screen and(max-width: 375px)
+        margin-top: 10px
+        margin-bottom: 10px
+    &__field
+        margin-right: 13px
+        height: 35px !important
+        min-width: 275px
+        width: 100%
+        @media screen and(max-width: 375px)
+            min-width: 200px
+    a
+        transition: 0.3s 
+        &:hover 
+            opacity: 0.7
+
+.sign
+    display: flex
+    align-items: center
+    margin-right: 30px
+    &__icon
+        margin-right: 10px
+    &__right
+        display: flex
+        flex-direction: column
+
+    &__sign
+        font-size: 16px
+        font-family: "Segoe UI"
+        font-weight: bold
+        color: rgb(255, 143, 11)
+        position: relative
+        align-self: flex-start
+        &:before
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            height: 2px
+            background-color: $or
+            width: 0
+            transition: 0.3s
+        &:hover
+            &:before
+                width: 100%
+    &__reg
+        font-size: 16px
+        font-family: "Segoe UI"
+        color: $graytextdark
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            height: 2px
+            background-color: $graytextdark 
+            width: 0
+            transition: 0.3s
+        &:hover
+            &:before
+                width: 100%
+
+
+.menu-slider
+    width: 100%
+    .swiper-wrapper
+        width: 100%
+        display: flex
+        justify-content: space-between
+    .swiper-slide
+        width: auto
+    .menu-slider-next
+        display: flex
+        min-height: 100%
+        background-color: #fff
+        width: 40px
+        right: 0
+    .menu-slider-prev 
+        display: flex
+        min-height: 100%
+        background-color: #fff
+        width: 30px
+        right: 30px
+        left: auto !important
+    @media screen and(max-width: 1023px) 
+        .menu-slider-next,
+        .menu-slider-next 
+            display: flex
+            min-height: 100%
+            background-color: #fff
+            width: 40px
+            right: 0
+
+.basket-index
+    top: 0%
+    left: 100%
+    min-width: 25px
+    height: 16px
+    line-height: 16px
+    text-align: center
+    border-radius: 8px
+    background-color: #e62e04
+    color: #fff
+    margin-left: 5px
+    font-size: 12px

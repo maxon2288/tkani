@@ -1,0 +1,81 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        <div class="first-container">
+            {{> first/first-2}}
+            {{> header/header}}
+        </div>
+        
+        <div class="bread">
+            <div class="wrapper">
+                <span>
+                    <a href="#">
+                        <span>Главная</span>
+                    </a>
+                </span>
+        
+                <span>
+                    {{Icon iconName="bread-arrow"}}
+                </span>
+        
+                <span>
+                    <a href="#">
+                        <span>Доставка</span>
+                    </a>
+                </span>
+            </div>
+        </div>
+        
+        <div class="m-content">
+            <div class="wrapper">
+                <div class="m-block px70 p30 pt70 jcsb">
+                    
+                    <div class="mt70">
+                        <p>Сайт осуществляет доставку товара следующими способами: служба доставки Сайта (курьерская доставка или доставка в пункт 
+                        </p>
+                        <p>самовывоза город Нижний Новгород), почтовая доставка службами:</p>
+                        <p>ПЭК, КИТ (GTD), Деловые линии, Энергия.</p>
+                    </div>
+
+                    <div class=" deliv-slider">
+                        <div class="deliv__items">
+                            <div class="deliv__item">
+                                <img src="%=static=%img/content/2.jpg" alt="">
+                            </div>
+
+                            <div class="deliv__item">
+                                <img src="%=static=%img/content/3.jpg" alt="">
+                            </div>
+
+                            <div class="deliv__item">
+                                <img src="%=static=%img/content/4.jpg" alt="">
+                            </div>
+
+                            <div class="deliv__item">
+                                <img src="%=static=%img/content/5.jpg" alt="">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{> footer/footer}}
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+
+</html>

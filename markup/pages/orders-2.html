@@ -1,0 +1,98 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        <div class="first-container">
+            {{> first/first-2}}
+            {{> header/header}}
+            
+        </div>
+        
+        <div class="bread">
+            <div class="wrapper">
+                <span>
+                    <a href="#">
+                        <span>Главная</span>
+                    </a>
+                </span>
+        
+                <span>
+                    {{Icon iconName="bread-arrow"}}
+                </span>
+        
+                <span>
+                    <a href="#">
+                        <span>Личный кабинет</span>
+                    </a>
+                </span>
+
+                <span>
+                    {{Icon iconName="bread-arrow"}}
+                </span>
+        
+                <span>
+                    <a href="#">
+                        <span>Основное</span>
+                    </a>
+                </span>
+            </div>
+        </div>
+        
+        <div class="wrapper m-content">
+            <div class="">
+                <ul class="gradient-head">
+                    <li><a href="#">Основное</a></li>
+                    <li><a href="#">Мои заказы</a></li>
+                    <li><a href="#">Настройки профиля</a></li>
+                </ul>
+
+                <div class="tabs" id="tab1-2">
+                    <ul class="tabs__list">
+                        <li><a href="#tab1">Все</a></li>
+                        <li><a href="#tab2">В наличии  </a></li>
+                        <li><a href="#tab3">На сборе</a></li>
+                        <li><a href="#tab4">Уходят в печать</a></li>
+                        <li><a href="#tab5">Предоплата</a></li>
+                        <li><a href="#tab6">В производстве</a></li>
+                        <li><a href="#tab7">Постоплата</a></li>
+                        <li><a href="#tab8">Нарезка</a></li>
+                        <li><a href="#tab9">Доставка</a></li>
+                        <li><a href="#tab10">Завершено</a></li>
+                    </ul>
+    
+                    <div class="tabs__content">
+                        {{> orders/orders-1}}
+                        {{> orders/orders-2}}
+                        {{> orders/orders-3}}
+                        {{> orders/orders-4}}
+                        {{> orders/orders-5}}
+                        {{> orders/orders-6}}
+                        {{> orders/orders-7}}
+                        {{> orders/orders-8}}
+                        {{> orders/orders-9}}
+                        {{> orders/orders-10}}
+                    </div>
+                </div>
+            </div>
+
+            <input type="hidden" class="input-ot" data-min="0">
+            <input type="hidden" class="input-do" data-max="1000">
+            
+        </div>
+
+        {{> footer/footer}}
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+
+</html>

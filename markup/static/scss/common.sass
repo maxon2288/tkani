@@ -1,0 +1,1987 @@
+// Common styles of the project
+
+html, body 
+    overflow-x: hidden
+    font-family: 'Segoe UI'
+    background-color: #e9eaec
+
+a 
+    font-family: 'Segoe UI'
+    text-decoration: none
+    color: black
+
+*
+    box-sizing: border-box
+    outline: none
+    
+.bread
+    display: flex
+    background-color: #f5f5f5
+    height: 65px
+    margin-top: 5px
+    align-items: center
+    .wrapper
+        flex-direction: row
+    svg
+        margin: 0 10px
+    a 
+        font-size: 17px
+        font-family: "Segoe UI"
+        color: rgb(66, 66, 66)
+        font-variant: small-caps
+        line-height: 1.2
+        font-weight: 500
+        @media screen and(max-width: 425px)
+            font-size: 12px
+    &__title
+        font-size: 32.785px
+        font-family: "Segoe UI"
+        color: rgb(66, 66, 66)
+        text-transform: uppercase
+        line-height: 1.2
+        width: 100%
+        text-align: center
+        
+
+.wrapper
+    margin: 0 auto
+    max-width: 1300px
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    @media screen and (max-width: 1370px)
+        max-width: 1100px
+    @media screen and(max-width: 1100px)
+        max-width: 100%
+        padding: 0 10px
+
+.bgcw
+    background: #fff
+.drop-menu
+    display: flex
+    padding: 35px 20px 55px 20px
+    background-color: #fff
+    width: 100%
+    visibility: hidden
+    opacity: 0
+    max-height: 100vh
+    transition: 0.3s    
+    box-shadow: 0 17px 17px 1px #4b4b4b34
+
+    overflow-x: hidden
+    overflow-y: auto
+    .wrapper
+        max-height: 100%
+    &__container 
+        display: flex
+        @media screen and(max-width: 767px)
+            flex-direction: column !important
+    &.visible
+        opacity: 1
+        visibility: visible
+    ul
+        list-style: none
+        padding: 0
+        margin: 0
+    &__img
+        width: 420px
+        height: 240px
+        border-radius: 20px
+        @media screen and(max-width: 1023px)
+            width: 200px
+            height: 100px
+    &__tab-int 
+        display: flex
+        @media screen and(max-width: 425px)
+            flex-direction: column
+    &__links1
+        min-width: 230px
+        margin-right: 10px
+        display: flex
+        flex-direction: column
+        @media screen and(max-width: 767px)
+            flex-direction: row
+            flex-wrap: wrap
+            margin-bottom: 50px !important
+        li 
+            margin-right: 20px 
+            height: 40px               
+        a 
+            display: flex
+            font-size: 18px
+            font-family: "Segoe UI"
+            color: #747474
+            padding-top: 5px
+            padding-bottom: 5px
+            outline: none
+            display: flex
+            align-items: center
+            @media screen and(max-width: 767px)
+                width: 100%
+                
+
+            svg
+                margin-left: 7px
+                opacity: 0
+                transform: translateX(10px)
+                transition: 0.1s
+        .ui-state-active
+            a   
+                color: #000
+                svg
+                    opacity: 1
+                    transform: translateX(0px)
+    
+    &__links2
+        min-width: 175px
+        margin-right: 10px
+        @media screen and(max-width: 425px)
+            display: flex
+            flex-wrap: wrap
+            margin-bottom: 30px
+        li 
+            @media screen and(max-width: 425px)
+                margin-right: 20px
+                
+        a
+            display: flex
+            align-items: center
+            transition: 0.3s
+            font-size: 18px
+            font-family: "Segoe UI"
+            color: rgb(0, 0, 0)
+            padding-top: 5px
+            outline: none
+            padding-bottom: 5px
+
+            svg
+                margin-left: 7px
+                opacity: 0
+                transform: translateX(10px)
+                transition: 0.1s
+        .ui-state-active
+            a   
+                color: #999
+                svg
+                    opacity: 1
+                    transform: translateX(0px)
+
+.slider
+    height: 610px
+    color: black
+    width: 100%
+    position: relative
+    overflow-x: hidden
+    margin-bottom: 40px
+    @media screen and(max-width: 425px)
+        height: 400px
+    &:before
+        content: ''
+        height: 240px
+        min-width: 10000000000vh
+        background: #6b6a6c
+        opacity: 0.4    
+        position: absolute
+        z-index: 1
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    .wrapper
+        height: 100%
+    &-container
+        height: 100%
+    &__title
+        font-size: 48px
+        font-family: "Segoe UI"
+        color: rgb(0, 0, 0)
+        font-weight: 500
+        text-align: center
+        @media screen and(max-width: 768px)
+            font-size: 30px
+    .swiper-container
+        height: 100%
+        position: relative
+    .swiper-slide
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        height: 100% 
+        background-color: #444444
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center center
+    &__line
+        height: 240px
+        min-width: 100%
+        background: #6b6a6c
+        opacity: 0.4    
+        position: absolute
+        z-index: 10
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+           
+    &__content
+        position: absolute
+        z-index: 100
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column  
+    &__button
+        margin-top: 60px
+    
+.swiper-button-next,
+.swiper-button-prev
+    background-image: url(../img/content/main-slider-nav.png)
+    background-repeat: no-repeat
+    background-position: center center
+.swiper-container
+    overflow: hidden
+.swiper-button-prev
+    transform: rotate(180deg)
+
+.swiper-pagination-bullet
+    background-color: transparent
+    width: 16px
+    height: 16px
+    border: 2px solid #fff
+    opacity: 1
+.swiper-pagination-bullet-active
+    background-color: #fff
+
+.social
+    display: flex
+    a.social__button
+        min-width: 36px
+        max-width: 36px
+        min-height: 36px
+        max-height: 36px
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 50%
+        border: 1px solid white
+        border-bottom-style: solid
+        position: relative
+        margin-right: 8px
+        &:hover
+            opacity: 0.7
+
+
+.line
+    height: 100%
+    width: 4px
+    background-color: #e9eaec
+
+.m-content
+    margin-top: 40px
+    margin-bottom: 100px
+    .m-block
+        min-height: 616px
+        width: 100%
+        flex-direction: column
+        display: flex
+        background: #fff
+    .form, .form-reg
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        width: 100%
+        padding: 0 70px
+        @media screen and(max-width: 500px)
+            padding: 0
+        &-sign 
+            width: 47%
+            padding-bottom: 55px
+            .m-field
+                max-width: 100%
+            .form__block
+                width: 100%
+    .already
+        width: 100%
+        display: flex
+        justify-content: center
+        margin-bottom: 20px
+    label
+        display: flex
+        align-items: center
+        p
+            margin: 0
+            a 
+                &:hover 
+                    text-decoration: underline
+
+
+
+.link-cont-center
+    display: flex
+    width: 100%
+    justify-content: center
+    
+.html 
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    
+
+.figure
+    img
+        max-width: 100%
+        height: auto
+
+    
+.form, .form-reg
+    width: 100%
+
+    &__content
+        width: 100%
+        display: flex
+        justify-content: space-between
+        padding-bottom: 60px
+        @media screen and(max-width: 768px)
+            flex-direction: column
+            .form-sign
+                max-width: 100% !important
+                width: 100%
+    &__wrapper
+        max-width: 945px
+        margin: 0 auto
+    &__row
+        margin-top: 70px
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        width: 100%
+        justify-content: space-between
+    &__block
+        display: flex
+        flex-direction: column
+        min-height: 0
+        width: 460px
+        text-align: center
+        font-size: 16px
+        font-family: "Segoe UI"
+        color: rgb(0, 0, 0)
+        font-variant: small-caps
+        line-height: 1.127
+        @media screen and(max-width: 1370px)
+            max-width: 300px
+            @media screen and(max-width: 768px)
+                max-width: 100%
+                width: 100%
+                .m-field 
+                    max-width: 100% !important
+        p 
+            margin: 0
+            margin-top: 15px
+    .m-field
+        margin-top: 5px
+        max-width: 455px
+        margin-bottom: 20px
+        
+    &__name
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    small
+        display: flex
+        font-size: 14px
+        color: rgb(103, 103, 103)
+        margin-bottom: 40px
+        &__row
+            display: flex
+            flex-wrap: wrap
+    &__checkbox
+        cursor: pointer
+        margin-bottom: 20px
+        display: flex
+        input
+            display: none
+            &:checked
+                ~ div 
+                    & img
+                        opacity: 1
+        div
+            display: flex
+            justify-content: center
+            align-items: center
+            position: relative
+            min-width: 25px
+            max-width: 25px
+            box-shadow: inset 0px 3px 5.94px 0.06px rgba(0, 0, 0, 0.28)
+            background-color: #fff
+            height: 25px
+            border-radius: 3px
+            img 
+                opacity: 0
+                transition: 0.3s
+        p 
+            margin-left: 10px !important
+
+    &__radio
+        cursor: pointer
+        margin-bottom: 20px
+        display: flex
+        align-items: center
+        input
+            display: none
+            &:checked
+                ~ div 
+                    &:after
+                        opacity: 1
+        div
+            display: flex
+            justify-content: center
+            align-items: center
+            position: relative
+            min-width: 26px
+            max-width: 26px
+            box-shadow: inset 0px 3px 5.94px 0.06px rgba(0, 0, 0, 0.28)
+            height: 25px
+            border-radius: 100px
+            &:after
+                content: ''
+                position: absolute
+                top: 50%
+                box-shadow: inset 0px -3px 3.94px 0.06px rgba(0, 0, 0, 0.28)
+                left: 50%
+                transform: translate(-50%,-50%)
+                background-color: #ff900e
+                width: 16px
+                height: 16px
+                border-radius: 50%
+                transition: 0.3s
+                opacity: 0
+        
+    &__how
+        max-width: 460px
+        width: 100%
+        margin-top: 35px
+        display: flex
+        flex-direction: column
+        align-items: center
+        &-cont 
+            display: flex
+            flex-wrap: wrap
+            max-width: 460px
+            width: 100%
+            justify-content: space-between
+
+    &__center
+        max-width: 510px
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin: 0 auto
+        margin-bottom: 100px
+        p 
+            margin-left: 10px
+        
+        .m-button
+            margin-top: 20px
+
+    &__right
+        padding: 0 70px
+        padding-bottom: 55px
+        width: 40%
+        .form__title
+            text-align: left
+        @media screen and(max-width: 768px)
+            max-width: 100%
+            width: 100%
+        @media screen and(max-width: 600px)
+            padding: 0px
+    &__title
+        font-size: 24px
+        font-family: "Segoe UI"
+        text-align: center
+        width: 100%
+        margin-bottom: 20px    
+
+.links
+  font-size: 16px
+  font-family: "Segoe UI"
+  color: rgb(0, 0, 0)
+
+.deliv
+    &__item
+        display: flex
+        justify-content: center
+        align-items: flex-start
+        img 
+            max-width: 100%
+            height: auto
+.deliv-slider
+    width: 100%
+    margin-bottom: 50px
+    .swiper-wrapper
+        display: flex
+        align-items: center
+    .swiper-slide
+        width: auto
+        height: 100%
+        display: flex
+        align-items: center
+    &__items
+        display: flex
+        justify-content: space-between
+        flex-wrap: nowrap
+        margin-top: 40px
+        @media screen and(max-width: 1024px)
+            flex-wrap: wrap
+    &__item
+        display: flex
+        align-items: center
+        img 
+            max-width: 100%
+            height: auto    
+        @media screen and(max-width: 1024px)
+            justify-content: center
+            width: 50%    
+        @media screen and(max-width: 425px)
+            width: 100%
+
+.about
+    position: relative
+    z-index: 10
+    padding: 90px 0
+    background-color: transparent
+    &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        z-index: -100
+        background-image: linear-gradient(to right, #f9d4e6 0%, #cec3ef 100%)
+    &:after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        z-index: -99
+        background-image: linear-gradient(to top, rgba(0,0,0, 0.3) 0%, transparent 100%)        
+
+
+    &__items
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__item
+        max-width: 825px
+        width: 100%     
+        height: 490px
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        margin-bottom: 90px
+        position: relative
+        &:nth-child(even)
+            .about__desc
+                background-image: linear-gradient(to bottom, #fff 0%, #b9e2f4 100%)
+        @media screen and(max-width: 768px)
+            flex-direction: column-reverse 
+            height: auto     
+            &:last-child 
+                margin-bottom: 0      
+    &__img
+        height: 90%
+        width: 52%
+        position: relative
+        z-index: -2
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 29px
+        border-top-right-radius: 0
+        border-bottom-right-radius: 0
+        background-color: rgba(255, 255, 255, 0.4)
+        @media screen and(max-width: 768px)
+            max-width: 100%
+            width: 100%
+            position: static
+            border-radius: 15px
+            height: auto
+            padding-top: 20px
+
+    &__desc
+        max-width: 490px
+        padding: 40px
+        display: flex   
+        justify-content: center
+        align-items: center
+        font-size: 24px
+        height: 100%
+        
+        background-image: linear-gradient(to bottom, #fff 0%, #ffaded 100%)
+        border-radius: 29px
+        box-shadow: 0px 12px 17.85px 3.15px rgba(0, 0, 0, 0.1)
+        @media screen and(max-width: 768px)
+            max-width: 100%
+        @media screen and(max-width: 425px)
+            padding: 10px
+            border-radius: 6px
+
+.wow
+    visibility: hidden
+
+.animd 
+    animation-duration: 1.9s
+.custom
+    &__img
+        img 
+            max-width: 100%
+            height: auto
+.map
+    img
+        max-width: 100%
+        height: auto
+.contacts
+    display: flex
+    justify-content: space-between
+    align-items: center
+    min-height: 100%
+    max-width: 880px
+    width: 100%
+    align-self: center
+    @media screen and(max-width: 767px)
+        flex-direction: column-reverse
+        max-width: 100%
+
+    &__left
+        width: 50%
+        height: 100%
+        display: flex
+        @media screen and(max-width: 767px)
+            width: 100%
+            img 
+                max-width: 100%
+                height: auto
+                align-self: flex-start
+    &__right
+        height: 400px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        text-align: center
+        @media screen and(max-width: 767px)
+            max-width: 100%
+            width: 100%
+            height: auto
+        a 
+            font-size: 24px
+    &__callback
+        font-size: 16px
+        display: flex
+        justify-content: center 
+        a 
+            color: #ff8f0b
+            text-align: left
+            position: relative
+            &:before
+                content: ''
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 100%
+                height: 2px
+                background-color: #ff8f0b
+                transition: 0.3s
+            &:hover
+                &:before
+                    width: 0
+        @media screen and(max-width: 767px)
+            margin-bottom: 30px
+    &__contacts
+        display: flex
+        flex-direction: column
+        align-items: center
+        @media screen and(max-width: 767px)
+            margin-bottom: 30px
+        a 
+            position: relative
+            @media screen and(max-width: 425px)
+                font-size: 18px
+            &:before
+                content: ''
+                position: absolute
+                left: 0
+                bottom: 0
+                height: 2px
+                background-color: #000000
+                width: 0
+                transition: 0.3s
+            &:hover
+                &:before
+                    width: 100%
+        .social
+            display: flex
+            justify-content: center
+            margin-top: 20px
+            a 
+                margin-right: 5px 
+                transition: 0.2s
+                &:hover
+                    opacity: 0.6  
+            a:before
+                display: none
+    &__info
+        @media screen and(max-width: 767px)
+            margin-bottom: 30px
+        p 
+            font-size: 24px
+            @media screen and(max-width: 425px)
+                font-size: 18px
+.m-textarea
+        min-width: 100%
+        max-width: 100%
+        min-height: 340px
+        max-height: 340px
+        padding: 30px
+        border-radius: 25px
+        border: none
+        outline: none
+        box-shadow: inset 0px 3px 5.94px 0.06px rgba(0, 0, 0, 0.28)
+    
+
+.callback 
+    p 
+        font-size: 24px
+        margin-top: 40px
+        margin-left: 20px
+    input
+        height: 75px
+        border-radius: 25px
+        max-width: 600px
+        width: 100%
+        margin-top: 10px
+
+    .m-button
+        height: 50px
+        max-width: 250px
+        width: 100%
+
+.gradient-head
+    width: 100%
+    height: 65px
+    align-items: center
+    display: flex
+    margin-bottom: 40px
+    border-radius: 26px
+    list-style: none
+    margin-top: 50px
+    justify-content: space-around
+    background-image: linear-gradient( to right, rgb(245,159,201) 0%, rgb(195,141,213) 47%, rgb(145,122,225) 100%)
+    box-shadow: 0px 12px 17.85px 3.15px rgba(0, 0, 0, 0.13)
+    margin-bottom: 40px
+    @media screen and(max-width: 425px)
+        border-radius: 5px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        height: auto
+        justify-content: flex-start
+        margin: 0
+        padding: 0
+        margin-bottom: 40px
+        background-color: rgb(145,122,225)
+        background-image: none
+    li 
+        list-style: none
+        @media screen and(max-width: 425px)
+            width: 100%
+            &:last-child
+                a 
+                    border-bottom: none
+        a 
+            outline: none
+            display: flex
+            @media screen and(max-width: 425px)
+                padding: 20px
+                width: 100%
+                border-bottom: 2px solid #fff
+                
+                &:before
+                    display: none
+        &.ui-state-active
+            a
+                color: #000000
+                &:before
+                    width: 100%
+            &:hover
+                color: #000000
+                &:before
+                    width: 100%
+
+    a 
+        font-size: 20px
+        color: #fff
+        position: relative
+        transition: 0.3s
+        &:before
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            height: 2px
+            width: 100%
+            background-color: #000
+            transition: 0.3s
+            width: 0
+        &.active
+            color: #000000
+            &:before
+                width: 100%
+        &:hover
+            color: #000000
+            &:before
+                width: 100%
+
+.profile
+    width: 57%
+    background-color: #fff
+    border-radius: 25px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    box-shadow: 0px 12px 17.85px 3.15px rgba(0, 0, 0, 0.1)
+    @media screen and(max-width: 767px)
+        width: 100%
+    &__container
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between  
+        width: 100%
+        margin-top: 40px
+        @media screen and(max-width: 767px)
+            flex-direction: column
+    &__top
+        padding: 30px
+        padding-bottom: 60px
+        display: flex
+        justify-content: space-between
+        @media screen and(max-width: 500px)
+            flex-direction: column
+    &__bottom
+        min-width: 100%
+        display: flex
+        justify-content: space-around
+        text-align: center
+        padding: 25px 0
+        border-bottom-left-radius: 25px
+        border-bottom-right-radius: 25px
+        flex-wrap: wrap
+        background-image: linear-gradient(to right, #d3ee7f 0%, #6cd7f1 100%)
+        margin-top: auto
+        @media screen and(max-width: 375px)
+            padding: 0
+    &__bottom-info
+        font-size: 16px
+        color: #676767
+        @media screen and(max-width: 375px)
+            width: 100%
+            height: auto
+            padding: 10px 0
+            border-bottom: 2px  solid #bbb
+            &:last-child 
+                border-bottom: none
+    &__info-title
+        font-size: 22px
+        color: #000000
+        font-weight: bold
+    &__img
+        margin-top: 10px
+        max-width: 200px
+        width: 100%
+    &__img-cont
+        width: 120px
+        height: 120px
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        align-items: flex-end
+        color: white
+        font-size: 22px
+        text-transform: uppercase
+        text-shadow: 0px 2px 6.51px rgba(0, 0, 0, 0.53)
+    &__vip
+        margin-bottom: 10px
+        text-decoration: underline
+    &__left
+        max-width: 500px
+        width: 100%
+    &__title
+        font-size: 22px
+        font-family: "Segoe UI"
+        color: rgb(0, 0, 0)
+        font-weight: bold
+    &__left-top
+        margin-bottom: 7px
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+    &__face
+        font-size: 16px
+        font-family: "Segoe UI"
+        color: rgb(103, 103, 103)
+        margin-bottom: 25px
+    &__red
+        display: flex
+        align-items: center
+        font-size: 16px
+        font-family: "Segoe UI"
+        color: rgb(103, 103, 103)
+        text-decoration: underline
+        svg
+            margin-right: 10px
+    &__info
+        display: flex
+        flex-direction: column
+    &__item
+        display: flex
+        align-items: center
+        b 
+            font-size: 16px
+            min-width: 90px
+        p 
+            font-size: 16px
+
+
+
+
+.messages
+    width: 38%
+    align-self: stretch
+    background-color: #fff
+    padding: 30px
+    border-radius: 25px
+    box-shadow: 0px 12px 17.85px 3.15px rgba(0, 0, 0, 0.1)
+    @media screen and(max-width: 767px)
+        width: 100%
+        margin-top: 40px
+    &__title
+        font-size: 22px
+        font-weight: bold
+        text-transform: uppercase
+        text-align: center
+        margin-bottom: 40px
+    &__item
+        color: #676767
+        display: flex
+        align-items: center
+        justify-content: space-between
+        font-size: 16px
+        font-weight: 500
+        padding-bottom: 15px
+        padding-top: 15px
+        border-bottom: 1px solid #ebebeb
+        transition: 0.3s
+        &.invisible
+            opacity: 0
+            visibility: hidden
+            height: 0
+            padding: 0
+            margin: 0
+
+        svg
+            margin-left: 10px
+            cursor: pointer
+            transition: 0.2s
+            &:hover
+                transform: rotate(90deg)
+.nice-select 
+    background-color: #fff
+    box-sizing: border-box
+    cursor: pointer
+    border-radius: 3px
+    height: 33px
+    width: 215px !important
+    line-height: 40px
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    position: relative
+    text-align: left !important
+    -webkit-transition: all 0.2s ease-in-out
+    transition: all 0.2s ease-in-out
+    user-select: none
+    padding: 0
+    padding-left: 15px
+    width: auto
+    outline: none
+    border: 1px solid #bbbbbb
+    font-size: 14px
+    color: #424242
+    font-weight: 500
+.filter
+    display: flex
+    flex-direction: column
+    width: 22.3%
+
+    
+    @media screen and(max-width: 1023px)
+        position: fixed
+        top: 0px
+        padding-top: 70px
+        left: 0
+        max-width: 270px
+        width: 100%
+        height: 100vh
+        background-color: #ffffff
+        z-index: 1000
+        transform: translate(-100%)
+        transition: 0.3s
+        box-shadow: 0 0 20px 1px rgba(0,0,0,0.2 )
+        opacity: 0
+        visibility: hidden
+        &.visible
+            opacity: 1
+            visibility: visible
+            transform: translate(0)
+    &__content-container    
+        max-height: 100%    
+        overflow-y: auto
+        padding-left: 25px
+        padding-right: 30px
+    &__open
+        cursor: pointer
+        transition: 0.1s
+        display: none
+        align-items: center
+        @media screen and(max-width: 1023px)
+            display: flex
+        svg 
+            width: 30px
+            height: 30px
+        &:hover
+            opacity: 0.7
+        h3  
+            margin-left: 10px
+    &__container
+        width: 100%
+        padding-top: 40px
+        display: flex
+        background-color: #fff
+        flex-direction: column
+        .wrapper
+            display: flex
+            flex-direction: row 
+    &__title
+        margin-bottom: 20px
+        font-size: 18px
+        font-family: "Segoe UI"
+        color: rgb(0, 0, 0)
+        font-weight: bold
+        text-transform: uppercase
+    &__price
+        .filter__title-2
+            margin-bottom: 30px
+    .form__checkbox
+        div
+            transform: scale(0.5)
+        p 
+            font-size: 16px
+            display: inline
+            a 
+                display: inline
+    &__title-2
+        font-size: 18px 
+        font-weight: bold
+        margin-bottom: 10px
+    &__select
+        display: flex
+        align-items: center
+        margin-right: 5px
+        font-size: 14px
+        color: #424242
+        font-weight: 500
+        &-text 
+            margin-right: 5px
+            font-size: 14px
+            color: #424242
+    &__params
+        margin-top: 40px
+    &__params-checks
+        margin-bottom: 30px
+    &__buttons
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        max-width: 220px
+        .m-button
+            margin-bottom: 10px
+            max-width: 150px
+            width: 100%
+            padding-left: 0
+            padding-right: 0 
+            display: flex
+        .m-button
+            display: flex
+            max-width: 150px
+            width: 100%
+            padding-left: 0
+            padding-right: 0
+    &__button
+        max-width: 150px
+        width: 100%
+    &__content
+    &__left
+        width: 72%
+        padding-left: 30px
+        border-left: 3px solid #f2f3f5
+        margin-bottom: 30px
+        @media screen and(max-width: 1023px)
+            border-left: none
+            padding-left: 0
+            width: 100%
+    &__select-container
+        display: flex
+    &__content
+        width: 100% 
+    &__top
+        display: flex
+        flex-direction: row
+        flex-wrap: nowrap
+        align-items: flex-start
+        justify-content: space-between
+        width: 100%
+        .form__radio
+            width: 170px
+    &__items
+        display: flex
+        flex-wrap: wrap
+        width: 100%
+    &__item
+        display: flex
+        flex-direction: column 
+        border-radius: 29px
+        box-shadow: 0px 12px 17.85px 3.15px rgba(0, 0, 0, 0.1)
+        overflow: hidden
+        width: 31.5%
+        margin-right: auto
+        margin-bottom: 23px
+        &:nth-child(3n+3)
+            margin-right: 0
+        @media screen and(max-width: 767px)
+            width: 48%
+            
+        @media screen and(max-width: 425px)
+            width: 100%
+            margin-right: 0
+    &__item-top
+        width: 100%
+        height: 280px
+        background-color: #cccccc
+    &__item-content
+        padding: 20px
+        display: flex
+        justify-content: space-between
+    &__left
+        display: flex
+        flex-direction: column
+    &__item-title
+        font-size: 16px
+    &__item-desc
+        margin-top: 20px
+        font-size: 18px
+        font-weight: bold
+    &__item-button
+        border-radius: 29px
+        width: 80px
+        height: 60px
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: rgb(255, 143, 11)
+        box-shadow: 0px 12px 17.85px 3.15px rgba(0, 0, 0, 0.1)
+        transition: 0.3s
+        &:hover
+            background-color: #ef870d
+    &__slider
+        margin-bottom: 70px
+        .swiper-slide
+            background-color: #cccccc
+            height: 275px
+            padding: 30px
+            
+
+            
+
+#flat-slider
+    height: 8px
+    margin-bottom: 35px
+    background-color: #ccc
+    .ui-slider-handle
+        background-color: #676767
+        width: 16px
+        height: 16px
+        border-radius: 40px
+    .ui-slider-
+    .ui-slider-range
+        position: absolute
+        z-index: 1
+        font-size: .7em
+        display: block
+        border: 0
+        background-position: 0 0    
+        background-color: $or
+
+ul 
+    li 
+        font-size: 18px
+
+.text-block
+    ol  
+        font-family: "Segoe ui"
+        margin: 0
+        padding: 0
+        list-style: none
+        margin-bottom: 20px
+        font-size: 14px
+        li
+            font-weight: bold  
+        ul
+            list-style: none
+            padding: 0
+            margin: 0
+            li
+                font-weight: normal
+    p 
+        line-height: 15px
+        font-size: 14px
+        margin-bottom: 20px
+    &__title
+        font-size: 18px
+        text-transform: uppercase
+        font-weight: bold
+        width: 100%
+        text-align: center  
+        margin-bottom: 50px
+        
+
+
+.news-row
+    display: flex
+    width: 100%
+    justify-content: space-between  
+    @media screen and(max-width: 700px)
+        flex-direction: column
+.news-col 
+    &__left
+        padding-left: 60px
+        width: 66%
+        @media screen and(max-width: 1024px)
+            padding-left: 0
+        @media screen and(max-width: 600px)
+            width: 100%
+    &__right
+        width: 28.4%
+        @media screen and(max-width: 700px)
+            width: 33%
+        @media screen and(max-width: 600px)
+            width: 100%
+    &__item
+        display: flex
+        flex-direction: column
+        margin-bottom: 70px
+        width: 100%
+        &-top 
+            border-radius: 29px
+            box-shadow: 0px 12px 17.85px 3.15px rgba(0, 0, 0, 0.13)
+            max-width: 798px
+            width: 100%
+            height: 408px
+            transition: 0.3s
+            @media screen and(max-width: 425px)
+                height: 200px
+                border-radius: 5px
+            &:hover
+
+                box-shadow: 0px 12px 20.85px 7.15px rgba(0, 0, 0, 0.13)
+                
+        .news__item-content
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+        .news__item-content-top
+            display: flex
+            flex-direction: row-reverse
+            justify-content: flex-end !important
+            align-items: flex-start
+            border-bottom: none
+            margin-bottom: 0
+            padding-bottom: 0
+            &-item
+                padding-right: 20px
+                border-right: 1px solid #b6b6b6
+        .news__item-title
+            margin-bottom: 20px
+        .news__item-content-right 
+            padding-right: 20px
+            height: 35px
+        .news__item-content-bottom
+            display: flex
+            flex-direction: column
+            height: 100%
+        .news__item-content-link
+            color: $or
+            font-size: 14px
+            margin-top: auto
+            margin-top: 30px
+            display: flex
+            align-items: center
+            vertical-align: middle
+            img 
+                width: 5px
+                height: 10px
+                margin-left: 5px
+                transition: 0.3s
+            &:hover
+                img 
+                    transform: translate(5px)
+    &__right-title
+        margin-bottom: 30px
+        font-size: 18px
+        font-family: "Segoe UI"
+        color: rgb(0, 0, 0)
+        font-weight: bold
+        text-transform: uppercase
+        line-height: 1
+    &__right-items
+        display: flex
+        flex-direction: column
+    &__right-item
+        width: 100%
+        display: flex
+        margin-bottom: 30px
+    &__right-img-cont
+        border-radius: 10px
+        box-shadow: 0px 12px 17.85px 3.15px rgba(0, 0, 0, 0.13)
+        min-width: 70px
+        max-width: 70px
+        min-height: 69px
+        max-height: 69px
+        z-index: 93
+        background-color: #cccccc
+        margin-right: 10px
+        transition: 0.3s
+        @media screen and(max-width: 425px)
+            border-radius: 3px
+        &:hover
+            opacity: 0.7
+    &__right-desc
+        font-size: 16px
+        color: #676767
+        &:hover
+            text-decoration: underline
+    &__archive-items
+        display: flex
+        width: 100%
+        flex-direction: column
+    &__archive-item
+        width: 100%
+    .form__checkbox
+        width: 100%
+        font-size: 16px
+        border-bottom: 1px solid #ebebeb
+        margin-bottom: 0
+        padding: 10px 0
+        display: flex
+        justify-content: space-between
+        p
+            font-size: 16px
+            color: #676767
+        div
+            transform: scale(0.5)
+    .form__checkbox-left
+        display: flex
+        align-items: center 
+    .news-col__right-tag 
+        margin-top: 30px
+        color: #676767
+        font-weight: bold
+        max-width: 245px
+    &__right-tags
+        margin-top: 45px
+.fs16
+    font-size: 16px
+.fs18 
+    font-size: 18px 
+.fs24
+    font-size: 24px
+
+
+
+.tabs 
+    width: 100%
+    &__desc
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+    &__list 
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin: 0
+        margin-top: 25px
+        margin-bottom: 30px
+        padding: 0
+        list-style: none
+        li 
+            max-width: 9.5%
+            width: 100%  
+            margin-bottom: 10px
+            @media screen and(max-width: 1100px)
+                max-width: 19%  
+            @media screen and(max-width: 900px)
+                max-width: 32%    
+            @media screen and(max-width: 600px)
+                max-width: 48%
+                margin-right: auto
+            a 
+                padding: 0 2px
+                border-radius: 12px
+                height: 55px
+                list-style: none
+                margin-right: 5px
+                background-color: #dad5dd
+                font-size: 16px
+                width: 100%
+                color: #676767
+                display: flex
+                justify-content: center
+                align-items: center
+                text-align: center
+                outline: none
+                transition: 0.3s
+                &:hover 
+                    background-color: #ccc5d1
+                @media screen and(max-width: 425px)
+                    height: 30px
+            &.ui-state-active a
+                background-color: #ab84c1
+                color: #ffffff
+    &__percent-100 
+        color: #ff4200
+    
+    &__number 
+        display: flex
+        width: 100%
+        justify-content: center
+        input 
+
+        &-text 
+            margin-left: 10px
+    &__delete 
+        cursor: pointer
+        svg 
+            transition: 0.3s
+        &:hover 
+            svg 
+                transform: rotate(90deg)
+    .table-container 
+        max-width: 100%
+        overflow-x: auto
+        border-radius: 23px
+    &__table
+        box-shadow: 0px 12px 17.85px 3.15px rgba(0, 0, 0, 0.13)
+        width: 100% 
+        overflow: hidden
+        border-radius: 23px
+        background-color: #fff
+        padding-bottom: 25px  
+        tr 
+            max-width: 100%
+            transition: 2s
+            &:nth-child(1)
+                padding: 0
+                background-color: #dad5dd 
+            &.invisible
+                display: none
+                opacity: 0     
+        th,td 
+            text-align: center
+            vertical-align: middle
+            min-width: 100px
+            height: 105px 
+        th 
+            background-color: #dad5dd
+            font-weight: 400    
+            text-align: center
+            vertical-align: middle
+            &:first-child
+                padding: 5px
+                padding-left: 35px
+        td 
+            border-bottom: 3px solid #e4e4e4
+            &:first-child 
+                padding: 5px
+                padding-left: 35px
+            &:nth-child(2)
+                text-align: left
+            &:nth-child(3)
+                width: 135px
+                padding: 5px
+            .m-button:not(.tabs__bottom-right .m-button)
+                max-width: 125px
+                padding: 0
+                height: 40px
+                margin: 0 auto
+            &.red 
+                background-color: #ffaeae
+            &.green
+                background-color: #aeffbb
+            &.blue
+                background-color: #aedeff
+            &.yellow
+                background-color: #fcffae
+            &.orange 
+                background-color: #fed088 
+            &.purp
+                background-color: #dbbaf5
+            &.gray
+                background-color: #c0bfbf
+            &.hard-blue
+                background-color: #a7b3ff
+            &.hard-red 
+                background-color: #ff7575
+            
+            .m-img-cont
+                min-width: 90px
+                max-width: 90px
+                height: 100%        
+                margin: 0 auto
+                border-radius: 10px
+                background-color: #cccccc
+    &__result 
+        border-bottom: none
+        td 
+            border-bottom: none
+        .tabs__percent
+            &-100,
+            &-30,
+            &-70
+                font-weight: bold
+    &__small
+        td 
+            height: 40px
+            text-align: left
+            border-bottom: none
+    &__link
+        color: #ff4200
+        text-decoration: underline
+        font-size: 13px
+        &:hover 
+            text-decoration: none
+    &__slicing 
+        td
+            border-bottom: none
+    &__slicing-price 
+        color: #ff4200
+        font-weight: bold
+        margin: 0 25px
+    &__slicing-left 
+        
+    &__slicing-button
+        a 
+            width: 190px !important
+            padding-left: 20px
+            padding-right: 20px
+    &__slicing-content 
+        display: flex
+        justify-content: center
+        align-items: center
+    &__bottom 
+        text-align: left
+        td 
+            text-align: right
+            border-bottom: none
+            margin-left: auto
+            .m-button
+                margin-right: 0
+                margin-left: auto
+                text-align: center
+                min-width: 195px
+        &-content
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            margin-right: 20px
+        &-left 
+            text-align: center
+            margin-right: 25px
+            small 
+                color: #676767
+        &-title 
+            font-size: 20px
+            margin-bottom: 15px
+            span 
+                color: #ff4200
+                font-weight: bold
+
+.norequire
+    p 
+        color: #676767
+.inputfile 
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    overflow: hidden
+    position: absolute
+    z-index: -1
+
+.settings
+    max-width: 860px
+    width: 100% 
+    margin: 0 auto
+    textarea 
+        min-height: 80px
+        height: 90px
+        max-height: 100px
+        margin-bottom: 20px
+        box-sizing: border-box
+    &__title 
+        font-size: 18px
+        font-family: "Segoe UI"
+        text-align: center
+        color: rgb(0, 0, 0)
+        text-transform: uppercase
+        max-width: 48%
+        width: 100%
+        @media screen and(max-width: 768px)
+            max-width: 100%
+    .form, .form-reg
+        padding: 0
+    &__img-cont 
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__img 
+        min-width: 105px 
+        max-width: 105px 
+        height: 105px
+        border-radius: 50%
+    &__link 
+        font-size: 16px
+        font-family: "Segoe UI"
+        color: rgb(103, 103, 103)
+        text-decoration: underline
+        font-variant: small-caps
+        margin-top: 10px
+        cursor: pointer
+        &:hover 
+            text-decoration: none
+    .form__block 
+        margin-right: 0
+        width: 100%
+        input 
+            max-width: 100%
+    &__row 
+        width: 100%
+        display: flex
+        margin-bottom: 40px
+        justify-content: space-between
+        &-last 
+            display: flex
+            flex-direction: column
+        @media screen and(max-width: 768px)
+            flex-direction: column
+    &__col
+        min-width: 48%
+    &__button-cont 
+        display: flex
+        width: 100%
+        justify-content: center
+
+.payment-tabs 
+    width: 100%
+hr 
+    width: 100%
+    height: 2px 
+    background-color: #e4e4e4
+    border: 0
+    margin: 20px 0
+
+.payment
+    max-width: 950px  
+    width: 100%  
+    margin: 0 auto
+    &__title 
+        font-size: 18px
+        font-family: "Segoe UI"
+        text-transform: uppercase
+        margin-bottom: 20px
+    &__center-cont
+        
+    &__checks 
+        margin-top: 40px
+    &__buttons 
+        display: flex
+        justify-content: space-around
+        margin-top: 40px
+        flex-wrap: wrap
+        .m-button 
+            max-width: 195px
+            width: 100%
+            margin: 5px 0 
+            &-purp 
+                background-color: #ab84c1
+                &:hover 
+                    background-color: #89699c
+        &-sb 
+            display: flex
+            justify-content: space-between
+
+            
+            
+.payment-tab 
+    width: 100% 
+    list-style: none
+    padding: 0
+    margin: 0
+    display: flex
+    margin-top: 40px
+    justify-content: space-between
+    overflow: hidden
+    border-radius: 50px
+    background-image: linear-gradient(to right, #c7e172 0%, #60cbe4 100%)
+    @media screen and(max-width: 1023px)
+        flex-direction: column
+        border-radius: 5px
+    li 
+        width: 33.333333%
+        display: flex
+        @media screen and(max-width: 1023px)
+            width: 100%
+        a 
+            
+            width: 100%
+            height: 65px
+            margin: 0
+            padding: 0
+            display: flex
+            justify-content: center
+            align-items: center
+            text-align: center
+            font-size: 20px
+            transition: 0.1s
+            outline: none
+            background-color: #d7d7d7
+            &:hover 
+                background-color: transparent
+        &.ui-state-active 
+            a 
+                background-color: transparent
+        
+.more-input 
+    display: none
+    &.visible 
+        display: flex
+.more-radio
+    display: none
+    flex-direction: column
+    &.visible 
+        display: flex
+.more-link 
+    display: none
+    flex-direction: column
+    &.visible 
+        display: flex
+
+
+.thanx-title
+    width: 100%
+    text-align: center
+    color: #764ca6
+    font-size: 40px
+    padding: 100px 0
+    font-weight: bold
+        
+        
+.quantity 
+  position: relative
+  margin: 0 10px
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+    
+  -webkit-appearance: none
+  margin: 0
+
+
+input[type=number]
+
+  -moz-appearance: textfield
+
+
+.quantity input 
+  width: 90px
+  border: none
+  height: 33px
+  line-height: 1.65
+  float: left
+  display: block
+  padding: 0
+  margin: 0
+  padding-left: 20px
+  background-color: #f2f2f2
+
+
+.quantity input:focus 
+  outline: 0
+
+
+.quantity-nav 
+  float: left
+  position: relative
+  height: 33px
+
+
+.quantity-button 
+  position: relative
+  cursor: pointer
+  border-left: 1px solid #fff
+  width: 20px
+  text-align: center
+  color: #333
+  font-size: 13px
+  font-family: "Trebuchet MS", Helvetica, sans-serif !important
+  -webkit-transform: translateX(-100%)
+  transform: translateX(-100%)
+  user-select: none
+  display: flex
+  justify-content: center
+  align-items: center
+  &:hover 
+      background-color: #ddd
+
+
+.quantity-button.quantity-up 
+  position: absolute
+  height: 50%
+  top: 0
+  border-bottom: 1px solid #fff
+
+
+.quantity-button.quantity-down 
+  position: absolute
+  bottom: -1px
+  height: 50%
+
+
+
+.overlay
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    z-index: 999
+    cursor: pointer
+    transition: 0.3s
+    opacity: 0
+    visibility: hidden
+    &.visible 
+        visibility: visible
+        opacity: 1
+.modal
+    position: fixed
+    top: 50%
+    left: 50%
+    z-index: 1000
+    padding: 50px 90px 55px 90px
+    border-radius: 12px
+    background-color: #dad5dd
+    max-width: 545px
+    transform: translate(-50%, -50%)
+    box-shadow: 0px 12px 17.85px 3.15px rgba(0, 0, 0, 0.13)
+    opacity: 0
+    visibility: hidden
+    transition: 0.3s
+    &__title
+        font-size: 20px
+        text-align: center
+    &__buttons
+        display: flex
+        width: 100%
+        justify-content: space-between
+        align-items: center
+        margin-top: 90px
+        .m-button-purp
+            box-shadow: 0px 12px 17.85px 3.15px rgba(0, 0, 0, 0.1)
+            height: 40px
+            display: flex
+            align-items: center
+            justify-content: center
+            max-width: 127px
+            border-radius: 30px
+            color: #ffffff
+            width: 100%
+            padding: 0 10px
+            font-size: 19px
+            margin-bottom: 10px
+            background-color: #ab84c1
+    
+        .m-button 
+            padding: 0 20px
+            height: 40px
+            margin-bottom: 10px
+    
+    &.visible 
+        opacity: 1
+        visibility: visible
+
+
+.settings__img
+    overflow: hidden
+    img
+        object-fit: cover
+        max-width: 100%
+        height: 100%
+
+.settings-label 
+    display: flex
+    flex-direction: column
+    text-align: center
+
+
+.pagination
+    display: flex
+    justify-content: center
+    margin: 40px 0
+    &__button
+        width: 38px
+        height: 38px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 8px
+        font-size: 18px
+        color: #676767
+        margin: 0 4px
+        border: 3px solid #b6b6b6
+        transition: 0.3s
+        &:hover
+            border-color: $or
+            color: $or
+        &.pagination__button-dots 
+            &:hover
+                border-color: #b6b6b6
+                color: #676767
+        &.active
+            border-color: $or
+    &__container    
+        display: flex
+        justify-content: center
+    

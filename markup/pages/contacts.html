@@ -1,0 +1,98 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        <div class="first-container">
+            {{> first/first-2}}
+            {{> header/header}}
+            
+        </div>
+        
+        <div class="bread">
+                <div class="wrapper">
+                    <span>
+                        <a href="#">
+                            <span>Главная</span>
+                        </a>
+                    </span>
+            
+                    <span>
+                        {{Icon iconName="bread-arrow"}}
+                    </span>
+            
+                    <span>
+                        <a href="#">
+                            <span>Контакты</span>
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+        <div class="m-content">
+            <div class="wrapper">
+                <div class="m-block p30 jcc">
+                    <div class="contacts">
+                        <div class="contacts__left wow fadeInLeft animd ">
+                            <img src="%=static=%img/content/7.jpg" alt="">
+                        </div>
+                        <div class="contacts__right">
+                            <div class="contacts__callback">
+                                <a href="#"> Форма обратной связи
+                                    </a>
+                            </div>
+
+                            <div class="contacts__contacts">
+                                <a href="tel:89991203378" class="contacts__tel">
+                                    8-999-120-33-78
+                                </a>  
+
+                                <a href="mailto:89527876717@mail.ru" class="contacts__mail">
+                                        89527876717@mail.ru
+                                </a>
+
+                                <div class="social">
+                                    <a href="#">
+                                        <img src="%=static=%img/content/vk-black.png" alt="">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="%=static=%img/content/ok-black.png" alt="">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="%=static=%img/content/inst-black.png" alt="">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="%=static=%img/content/yt-black.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="contacts__info">
+                                <p>ИП Кульков Алексей Сергеевич</p>
+                                <p>ИНН   526306732721</p>
+                                <p>ОГРН 318527500002607</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{> footer/footer}}
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+
+</html>

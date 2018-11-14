@@ -1,0 +1,181 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        <div class="first-container">
+            {{> first/first-2}}
+            {{> header/header}}
+        </div>
+        
+        <div class="bread">
+                <div class="wrapper">
+                    <span>
+                        <a href="#">
+                            <span>Главная</span>
+                        </a>
+                    </span>
+            
+                    <span>
+                        {{Icon iconName="bread-arrow"}}
+                    </span>
+            
+                    <span>
+                        <a href="#">
+                            <span>Главная</span>
+                        </a>
+                    </span>
+
+                    <span>
+                        {{Icon iconName="bread-arrow"}}
+                    </span>
+            
+                    <span>
+                        <a href="#">
+                            <span>Главная</span>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        
+        <div class="payment-tabs wrapper">
+            <ul class="payment-tab">
+                <li><a href="#tab-1-1">Проверка  личных  данных</a></li>
+                <li><a href="#tab-1-2">Формирование  счета</a></li>
+                <li><a href="#tab-1-1">Оплата</a></li>
+            </ul>
+    
+            <div class="payment"  id="tab-1-1">
+                <div class="m-content">
+                    <div class="wrapper">
+                        <div class="m-block p30">
+                            <div class="payment__title">
+                                    данные для выставления счетов:
+                            </div>
+                            <div class="payment__item">
+                                <b>ФИО:</b>  Иванов Иван Иванович
+                            </div>
+    
+                            <hr>
+    
+                            <div class="payment__title">
+                                данные для доставки:
+                            </div>
+    
+                            <div class="payment__item">
+                                <b>
+                                    ТК  
+                                </b>
+                                ПЭК
+                            </div>
+    
+                            <div class="payment__item">
+                                <b>
+                                        Фио:  
+                                </b>
+                                Иванов Иван Иванович.
+                            </div>
+    
+                            <div class="payment__item">
+                                <b>
+                                        Страна:  
+                                </b>
+                                Россия
+                            </div>
+    
+                            <div class="payment__item">
+                                <b>
+                                        Город:  
+                                </b>
+                                Москва
+                            </div>
+    
+                            <div class="payment__item">
+                                <b>
+                                        Телефон:  
+                                </b>
+                                8-952-787-67-17
+                            </div>
+    
+                            <div class="payment__item">
+                                <b>
+                                        Серия и номер паспорта:  
+                                </b>
+                                2215 856324
+                            </div>
+    
+                            
+    
+    
+                            <div class="payment__checks">
+                                <label class="form__checkbox">
+                                    <input type="checkbox" name="check">
+                                    <div><img src="%=static=%img/content/check.png" alt=""></div>
+            
+                                    <p>Ознакомился и согласен с Пользовательским соглашением, Публичной офертой , 
+                                            Условиями покупки и предзаказа интернет-магазина MERA </p>
+                                </label>
+            
+                                <label class="form__checkbox">
+                                    <input type="checkbox" name="check">
+                                    <div><img src="%=static=%img/content/check.png" alt=""></div>
+            
+                                    <p>Заказ временно не отправлять</p>
+                                </label>
+                            </div>
+    
+                            <div class="payment__buttons">
+                                <a href="#" class="m-button m-button-purp">Изменить</a>
+                                <a href="#" class="m-button">Далее</a>
+                            </div>
+    
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment"  id="tab-1-2">
+                <div class="m-content">
+                    <div class="wrapper">
+                        <div class="m-block p30">
+
+                            
+
+                            <div class="payment__center-cont">
+                                <figure>
+                                    <img src="%=static=%img/content/print.jpg" alt="">
+                                </figure>
+    
+                                <div class="payment__checks">
+                                    
+                                </div>
+    
+                                <div class="payment__buttons payment__buttons-sb">
+                                    <a href="#" class="m-button m-button-purp">Изменить</a>
+                                    <a href="#" class="m-button">Далее</a>
+                                </div>
+                                
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{> footer/footer}}
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+
+</html>

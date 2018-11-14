@@ -1,0 +1,282 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        <div class="first-container">
+            {{> first/first-2}}
+            {{> header/header}}
+            
+        </div>
+        
+        <div class="bread">
+            <div class="wrapper">
+                <span>
+                    <a href="#">
+                        <span>Главная</span>
+                    </a>
+                </span>
+        
+                <span>
+                    {{Icon iconName="bread-arrow"}}
+                </span>
+        
+                <span>
+                    <a href="#">
+                        <span>Личный кабинет</span>
+                    </a>
+                </span>
+
+                <span>
+                    {{Icon iconName="bread-arrow"}}
+                </span>
+        
+                <span>
+                    <a href="#">
+                        <span>Основное</span>
+                    </a>
+                </span>
+            </div>
+        </div>
+
+        <div class="wrapper m-content">
+            <div class="">
+                <ul class="gradient-head">
+                    <li><a href="#">Основное</a></li>
+                    <li><a href="#">Мои заказы</a></li>
+                    <li><a href="#">Настройки профиля</a></li>
+                </ul>
+
+                <div class="m-block py30" id="tab1-3">
+                    <form action="/" class="form">
+                        <div class="settings ">
+                            <div class="settings__row">
+                                <div class="settings__col">
+                                    <div class="settings__img-cont">
+                                        <div>
+                                            <label for="file" class="settings-label">
+                                                <div class="settings__img">
+                                                    <img id="image" src="http://via.placeholder.com/100x100" alt="" />
+                                                </div>
+
+                                                <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                                                <span>Загрузить изображение</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="settings__col">
+                                    <div class="require form__block">
+                                
+                                        <p>E-mail*</p>
+                                        <input type="text" name="mail" class="m-field">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings__title">
+                                Личные данные
+                            </div>
+                            <div class="settings__row"> 
+                                
+                                <div class="settings__col">
+                                    
+                                    <div class="require form__block">
+                                        <p>Фамилия*</p>
+                                        <input name="sur" type="text" class="m-field">
+                                    </div>
+                                </div>
+
+
+                                <div class="settings__col">
+                                    <div class=" form__block">
+                                        <p>Имя*</p>
+                                        <input type="text" name="name" class="m-field">
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="settings__title">
+                                данные для выставления счетов
+                            </div>
+
+                            <div class="settings__row">
+                                <div class="settings__col">
+                                    
+                                    <div class="require form__block">
+                                        <p>Фамилия*</p>
+                                        <input  type="text"  name="sur" class="m-field">
+                                    </div>
+                                    <div class="require form__block">
+                                        <p>Имя*</p>
+                                        <input type="text" name="name" class="m-field">
+                                    </div>
+                                    <div class="require form__block">
+                                        <p>Отчество*</p>
+                                        <input type="text" name="father" class="m-field">
+                                    </div>
+                                </div>
+
+                                <div class="settings__col">
+                                    <div class="form__block norequire">
+                                        <p>Наименование организации</p>
+                                        <input type="text" name="text" class="m-field">
+                                    </div>
+                                    <div class="form__block norequire">
+                                        <p>ИНН организации</p>
+                                        <input type="text" name="text" class="m-field">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="settings__title">
+                                данные для доставки
+                            </div>
+
+                            <div class="settings__row">
+                                <div class="settings__col">
+                                    
+
+                                    <label class="form__radio">
+                                        <input type="radio" name="check">                                    
+                                        <div></div>
+                                        <p class="ml20">Курьерская доставка по г.Нижнему Новгороду</p>
+                                    </label>
+
+                                        <label class="form__radio">
+                                        <input type="radio" name="check">                                    
+                                        <div></div>
+                                        <p class="ml20">ТК КИТ (GTD)</p>
+                                    </label>
+
+                                        <label class="form__radio">
+                                        <input type="radio" name="check">                                    
+                                        <div></div>
+                                        <p class="ml20">ТК ПЭК</p>
+                                    </label>
+
+                                        <label class="form__radio">
+                                        <input type="radio" name="check">                                    
+                                        <div></div>
+                                        <p class="ml20">ТК Деловые линии</p>
+                                    </label>
+
+                                        <label class="form__radio">
+                                        <input type="radio" name="check">                                    
+                                        <div></div>
+                                        <p class="ml20">ТК Энергия</p>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="settings__row">
+                                <div class="setting__col">
+                                    <div class="require form__block">
+                                        <p>Фамилия*</p>
+                                        <input name="sur" type="text" class="m-field">
+                                    </div>
+                                    <div class="require form__block">
+                                        <p>Имя*</p>
+                                        <input type="text" name="name" class="m-field">
+                                    </div>
+                                    <small>*Для оформления доставки на организацию ФИО не требуется</small>
+                                </div>
+
+                                <div class="settings__col">
+                                    <div class="require form__block">
+                                        <p>Отчество*</p>
+                                        <input type="text" name="father" class="m-field">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings__row">
+                                <div class="settings__col">
+                                    <div class="form__block norequire">
+                                        <p>Наименование организации</p>
+                                        <input type="text" name="text" class="m-field">
+                                    </div>
+                                    <div class="require form__block">
+                                        <p>Страна/Регион*</p>
+                                        <input type="text" name="req" class="m-field">
+                                    </div>
+                                    <div class="require form__block">
+                                        <p>Номер телефона*</p>
+                                        <input type="text" name="phone" class="m-field">
+                                    </div>
+                                    <div class="norequire form__block">
+                                        <p>Серия и номер паспорта</p>
+                                        <input type="text" name="text" class="m-field">
+                                    </div>
+
+                                    <small>*В ТК КИТ (GTD) паспортные данные не требуются</small>
+                                    
+                                </div>
+
+                                <div class="settings__col">
+                                    <div class="require form__block">
+                                        <p>ИНН организации</p>
+                                        <input type="text" name="text" class="m-field">
+                                    </div>
+
+                                    <div class="require form__block">
+                                        <p>Город*</p>
+                                        <input type="text" name="req" class="m-field">
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+
+                            <div class="settings__row settings__row-last">
+                                <div class="norequire form__block">
+                                    <p>Комментарии</p>
+                                    <textarea class="m-textarea" name="textarea" id="" cols="30" rows="10"></textarea>
+                                </div>  
+
+                                <label class="form__checkbox">
+                                    <input type="checkbox" name="check">                                    
+                                    <div><img src="%=static=%img/content/check.png" alt=""></div>
+
+                                    <p>Получать уведомления от сайта</p>
+                                </label>
+                                <label class="form__checkbox">
+                                    <input type="checkbox" name="check">                                    
+                                    <div><img src="%=static=%img/content/check.png" alt=""></div>
+                                    <p>Заказ временно не отправлять</p>
+                                </label>
+                                <label class="form__checkbox">
+                                    <input type="checkbox" name="check">                                    
+                                    <div><img src="%=static=%img/content/check.png" alt=""></div>
+                                    <p>Дополнительная упаковка в ТК</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="link-cont-center mta">
+                            <button href="reg.html" class="m-button">Cохранить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+
+        {{> footer/footer}}
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+
+</html>

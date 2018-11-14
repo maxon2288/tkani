@@ -1,0 +1,151 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        <div class="first-container">
+            {{> first/first-2}}
+            {{> header/header}}
+        </div>
+        
+        {{> bread/bread-1}}
+        <div class="product">
+            <div class="product__images">
+                
+                <div class="product__main-img swiper-container swiper-container-top">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide m-img-cont">
+                            <img src="%=static=%img/content/footer.jpg" alt="">                    
+                        </div>
+
+                        <div class="swiper-slide m-img-cont">
+                            <img src="%=static=%img/content/footer.jpg" alt="">                    
+                        </div>
+
+                        <div class="swiper-slide m-img-cont">
+                            <img src="%=static=%img/content/footer.jpg" alt="">                    
+                        </div>
+
+                        <div class="swiper-slide m-img-cont">
+                            <img src="%=static=%img/content/footer.jpg" alt="">                    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product__bottom-img swiper-container swiper-container-thumbs">
+                    <div class="swiper-wrapper">
+                        <div class="product__bottom-img-cont swiper-slide m-img-cont">
+                            <img src="%=static=%img/content/footer.jpg" alt="">
+                        </div>
+
+                        <div class="product__bottom-img-cont swiper-slide m-img-cont">
+                            <img src="%=static=%img/content/footer.jpg" alt="">
+                        </div>
+
+                        <div class="product__bottom-img-cont swiper-slide m-img-cont">
+                            <img src="%=static=%img/content/footer.jpg" alt="">
+                        </div>
+
+                        <div class="product__bottom-img-cont swiper-slide m-img-cont">
+                            <img src="%=static=%img/content/footer.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__description px70">
+                <div class="product__title">
+                        Футер однотон васильковый
+                </div>
+
+                <div class="product__price">
+                        Цена:   <span> <span class="price-kg">1000</span> руб. </span> за 1кг
+                </div>
+
+                <div class="product__count">
+                    Количество 
+                    <div class="quantity">
+                        <input type="number" min="0.1" max="1000" value="1">
+                    </div> кг
+
+                    
+                </div>
+
+                <div class="product__params">
+                    <p>Состав: хлопок 95% + лайкра 5%</p>
+                    <p>Качество: пенье</p>
+                    <p>Плотность: 240 +- 5</p>
+                    <p>Ширина: 180см +-5</p>
+                    <p>Производитель:  Турция</p>
+
+                </div>
+
+                <p> <b> МРЦ:</b> 1200руб. за 1кг</p>
+
+
+                <div class="product__result">
+
+                    <p>
+                        
+                        <b>Общая стоимость: </b>      
+                        <span class="price-result">
+                        </span>
+                    </p>
+
+                    <small>*В стоимость не входит стоимость доставки</small> 
+
+                    <div class="form__center">
+                        <a href="#" class="m-button"> {{Icon iconName="basket-button"}} В корзину</a>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+
+
+
+        <div class="goods">
+
+            
+                <div class="wrapper">
+                    <div class="goods__content-title">
+                        Похожие товары
+                    </div>
+                    <div class="goods__container">
+                        <div class="goods__items">
+                            {{> goods/goods}}
+                            {{> goods/goods}}
+                            {{> goods/goods}}
+                            {{> goods/goods}}
+                            {{> goods/goods}}
+                            {{> goods/goods}}
+                            {{> goods/goods}}
+                            {{> goods/goods}}
+                            {{> goods/goods}}
+                            {{> goods/goods}}
+                            {{> goods/goods}}
+                            {{> goods/goods}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        {{> footer/footer}}
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+
+</html>

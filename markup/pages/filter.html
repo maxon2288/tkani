@@ -1,0 +1,265 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        <div class="first-container">
+            {{> first/first-2}}
+            {{> header/header}}
+        </div>
+        {{> bread/bread-1}}
+        
+        <div class="filter__container ">
+
+            <div class="wrapper">
+                <div class="filter__open">
+                    {{Icon iconName="menu"}}
+                    <h3>Фильтр</h3>
+                </div>
+            </div>
+            <div class="wrapper">
+                
+                <form action="#" class="filter">
+
+                    <div class="filter__content-container">
+                        <div class="filter__title">
+                            Фильтр
+                        </div>
+        
+                        <div class="filter__price">
+                            <div class="filter__title-2">
+                                Цена
+                            </div>
+        
+        
+                            <div id="flat-slider">
+                            </div>
+
+                            <input type="hidden" class="input-ot" name="min-price" data-min="">
+                            <input type="hidden" class="input-do" name="max-price" data-max="">
+        
+                            <div class="filter__price-result">
+                                Цена:  <span>300-900 руб.</span>
+                            </div>
+                            
+                        </div>
+        
+                        <div class="filter__params">
+                            <div class="filter__params-item">
+                                <div class="filter__title-2">
+                                    Тип ткани
+                                </div>
+        
+                                <div class="filter__params-checks">
+                                    <label class="form__checkbox">
+                                        <input type="checkbox" name="check">
+                                        <div><img src="%=static=%img/content/check.png" alt=""></div>
+        
+                                        <p>Трикотаж</p>
+        
+                                    </label>
+                                    <label class="form__checkbox">
+                                        <input type="checkbox" name="check">
+                                        <div><img src="%=static=%img/content/check.png" alt=""></div>
+        
+                                        <p>курточные</p>
+        
+                                    </label>
+        
+                                    <label class="form__checkbox">
+                                        <input type="checkbox" name="check">
+                                        <div><img src="%=static=%img/content/check.png" alt=""></div>
+        
+                                        <p>шелк</p>
+        
+                                    </label>
+                                    <label class="form__checkbox">
+                                        <input type="checkbox" name="check">
+                                        <div><img src="%=static=%img/content/check.png" alt=""></div>
+        
+                                        <p>Х/Б</p>
+        
+                                    </label>
+                                    <label class="form__checkbox">
+                                        <input type="checkbox" name="check">
+                                        <div><img src="%=static=%img/content/check.png" alt=""></div>
+        
+                                        <p>Фэшн</p>
+        
+                                    </label>
+                                </div>
+    
+                                
+                            </div>
+    
+                            <div class="filter__params-item">
+                                <div class="filter__title-2">
+                                    Плотность
+                                </div>
+        
+                                <div class="filter__params-checks">
+                                    <label class="form__checkbox">
+                                        <input type="checkbox" name="check">
+                                        <div><img src="%=static=%img/content/check.png" alt=""></div>
+        
+                                        <p>150</p>
+        
+                                    </label>
+                                    <label class="form__checkbox">
+                                        <input type="checkbox" name="check">
+                                        <div><img src="%=static=%img/content/check.png" alt=""></div>
+        
+                                        <p>180</p>
+        
+                                    </label>
+        
+                                    <label class="form__checkbox">
+                                        <input type="checkbox" name="check">
+                                        <div><img src="%=static=%img/content/check.png" alt=""></div>
+        
+                                        <p>240</p>
+        
+                                    </label>
+                                    <label class="form__checkbox">
+                                        <input type="checkbox" name="check">
+                                        <div><img src="%=static=%img/content/check.png" alt=""></div>
+        
+                                        <p>360</p>
+        
+                                    </label>
+                                    <label class="form__checkbox">
+                                        <input type="checkbox" name="check">
+                                        <div><img src="%=static=%img/content/check.png" alt=""></div>
+        
+                                        <p>500</p>
+        
+                                    </label>
+                                </div>
+    
+                                
+                            </div>
+    
+                            <div class="filter__params-item">
+                                <div class="filter__title-2">
+                                    Рисунок
+                                </div>
+        
+                                <div class="filter__params-checks">
+                                    <label class="form__checkbox">
+                                        <input type="checkbox" name="check">
+                                        <div><img src="%=static=%img/content/check.png" alt=""></div>
+        
+                                        <p>Однотонный</p>
+        
+                                    </label>
+                                    <label class="form__checkbox">
+                                        <input type="checkbox" name="check">
+                                        <div><img src="%=static=%img/content/check.png" alt=""></div>
+        
+                                        <p>Принт</p>
+        
+                                    </label>
+                                </div>
+                                
+                            </div>
+    
+                        </div>
+        
+                        <div class="filter__buttons">
+                            <button class="filter-submit filter__button m-button">Применить</button>
+                            <a href="#" class="filter__button m-button-gray">Сбросить</a>
+                        </div>
+                    </div>
+                    
+                </form>
+
+                <div class="filter__left">
+                    <div class="filter__content-top">
+                        <div class="swiper-container filter__slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide m-img-cont"><img src="http://via.placeholder.com/1000x1000/cccccc" alt=""></div>
+                                <div class="swiper-slide m-img-cont"><img src="http://via.placeholder.com/1000x1000/cccccc" alt=""></div>
+                                <div class="swiper-slide m-img-cont"><img src="http://via.placeholder.com/1000x1000/cccccc" alt=""></div>
+                                <div class="swiper-slide m-img-cont"><img src="http://via.placeholder.com/1000x1000/cccccc" alt=""></div>
+                            </div>
+
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>  
+                    </div>
+
+                    <form action="/" class="filter__top">
+                        
+
+                        <div class="filter__select-container">
+                            <label class="form__radio">
+                                <input type="radio" name="radio" checked>
+                                <div></div>
+                                <p>Самые новые</p>
+                            </label>
+    
+                            <label class="form__radio">
+                                <input type="radio" name="radio">
+                                <div></div>
+                                <p>Самые новые</p>
+                            </label>
+                        </div>
+
+
+                        <div class="filter__select">
+                            <div class="filter__select-text">
+                                Сортировать по:
+                            </div>
+
+                            <select class="form-select">
+                                <option value="1">Some option</option>
+                                <option value="1">Some option</option>
+                                <option value="1">Some option</option>
+                                <option value="2">Another option</option>
+                                <option value="3" disabled>A disabled option</option>
+                                <option value="4">Potato</option>
+                            </select>
+                        </div>
+                    </form>
+                    
+                    <div class="filter__content">
+
+                        <div class="filter__items">
+                            {{> goods-item/goods-item}}
+                            {{> goods-item/goods-item}}
+                            {{> goods-item/goods-item}}
+                            {{> goods-item/goods-item}}
+                            {{> goods-item/goods-item}}
+                            {{> goods-item/goods-item}}
+                            {{> goods-item/goods-item}}
+                            {{> goods-item/goods-item}}
+                            {{> goods-item/goods-item}}
+                            {{> goods-item/goods-item}}
+                            {{> goods-item/goods-item}}
+                            {{> goods-item/goods-item}}
+                            
+                        </div>
+
+                        {{> pagination/pagination}}                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        {{> footer/footer}}
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+
+</html>

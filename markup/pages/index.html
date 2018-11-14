@@ -1,0 +1,205 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+<body class="page">
+%=symbols=%
+
+        <div class="first">
+            <div class="first-grad"></div>
+            <div class="parralax">
+                <div class="parralax-1 m-img-cont">
+                    <img src="%=static=%img/content/parralax-1-2.png" alt="">
+                </div>
+        
+                <div class="parralax-2 m-img-cont">
+                    <img src="%=static=%img/content/parralax-2-2.png" alt="">
+                </div>
+        
+                <div class="parralax-3 m-img-cont">
+                    <img src="%=static=%img/content/parralax-3-2.png" alt="">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="logo-container">
+                    <img src="../static/img/content/logo-1.png" alt="">
+                </div>
+    
+                <div class="reg-block ">
+                    <div class="reg-block__title">
+                        Получить полный доступ к ценам 
+                        и эксклюзивным товарам
+                    </div>
+    
+                    <a class="m-button" href="#">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    
+    {{> header/header}}
+
+    <div class="slider">
+        <div class="wrapper">
+            <div class="slider-container">
+                <div class="swiper-container main-slider">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide"  style="background-image: url(../static/img/content/1-bg.jpg);">
+                            <div class="slider__line"></div>
+                            <div class="slider__content">   
+                                <div class="slider__title"  data-swiper-parallax="-500">
+                                    Новая коллекция
+                                </div>
+
+                                <a href="@" class="slider__button m-button"   data-swiper-parallax="-1000">
+                                        Смотреть
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide"  style="background-image: url(../static/img/content/1-bg.jpg);">
+                            <div class="slider__line"></div>
+                            <div class="slider__content">   
+                                <div class="slider__title"  data-swiper-parallax="-500">
+                                    Новая коллекция
+                                </div>
+
+                                <a href="@" class="slider__button m-button"   data-swiper-parallax="-1000">
+                                        Смотреть
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide"  style="background-image: url(../static/img/content/1-bg.jpg);">
+                            <div class="slider__line"></div>
+                            <div class="slider__content">   
+                                <div class="slider__title"  data-swiper-parallax="-500">
+                                    Новая коллекция
+                                </div>
+
+                                <a href="@" class="slider__button m-button"   data-swiper-parallax="-1000">
+                                        Смотреть
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide"  style="background-image: url(../static/img/content/1-bg.jpg);">
+                            <div class="slider__line"></div>
+                            <div class="slider__content">   
+                                <div class="slider__title"  data-swiper-parallax="-500">
+                                    Новая коллекция
+                                </div>
+
+                                <a href="@" class="slider__button m-button"   data-swiper-parallax="-1000">
+                                        Смотреть
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide"  style="background-image: url(../static/img/content/1-bg.jpg);">
+                            <div class="slider__line"></div>
+                            <div class="slider__content">   
+                                <div class="slider__title"  data-swiper-parallax="-500">
+                                    Новая коллекция
+                                </div>
+
+                                <a href="@" class="slider__button m-button"   data-swiper-parallax="-1000">
+                                        Смотреть
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide"  style="background-image: url(../static/img/content/1-bg.jpg);">
+                            <div class="slider__line"></div>
+                            <div class="slider__content">   
+                                <div class="slider__title"  data-swiper-parallax="-500">
+                                    Новая коллекция
+                                </div>
+
+                                <a href="@" class="slider__button m-button"   data-swiper-parallax="-1000">
+                                        Смотреть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <div class="swiper-pagination">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="goods">
+        <div class="wrapper">
+            <div class="goods__container">
+                <div class="goods__items">
+                    {{> goods/goods}}
+                    {{> goods/goods}}
+                    {{> goods/goods}}
+                    {{> goods/goods}}
+                    {{> goods/goods}}
+                    {{> goods/goods}}
+                    {{> goods/goods}}
+                    {{> goods/goods}}
+                    {{> goods/goods}}
+                    {{> goods/goods}}
+                    {{> goods/goods}}
+                    {{> goods/goods}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="tube">
+
+        <div class="wrapper">
+            <div class="tube__container">
+                <div class="tube__img">
+                    <img src="../static/img/content/tube.jpg" alt="">
+                </div>
+
+                <div class="tube__items lightgallery">
+                    {{> tube/tube}}
+                    {{> tube/tube}}
+                    {{> tube/tube}}
+                    {{> tube/tube}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="news">
+        <div class="wrapper">
+            <div class="news__title">
+                НОВОСТИ  
+            </div>
+    
+            <div class="news__content">
+                {{> news-item/news-item}}
+                {{> news-item/news-item}}
+            </div>
+        </div>
+    </div>
+    
+    {{> footer/footer}}
+
+    <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+
+    <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+    <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+
+
+</body>
+
+</html>

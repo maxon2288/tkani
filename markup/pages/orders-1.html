@@ -1,0 +1,166 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        <div class="first-container">
+            {{> first/first-2}}
+            {{> header/header}}
+            
+        </div>
+        
+        <div class="bread">
+            <div class="wrapper">
+                <span>
+                    <a href="#">
+                        <span>Главная</span>
+                    </a>
+                </span>
+        
+                <span>
+                    {{Icon iconName="bread-arrow"}}
+                </span>
+        
+                <span>
+                    <a href="#">
+                        <span>Личный кабинет</span>
+                    </a>
+                </span>
+
+                <span>
+                    {{Icon iconName="bread-arrow"}}
+                </span>
+        
+                <span>
+                    <a href="#">
+                        <span>Основное</span>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="wrapper m-content">
+            <div class="">
+                <ul class="gradient-head">
+                    <li><a href="#">Основное</a></li>
+                    <li><a href="#">Мои заказы</a></li>
+                    <li><a href="#">Настройки профиля</a></li>
+                </ul>
+    
+                
+
+                <div class="profile__container"  id="tab1-1">
+                    <div class="profile">
+                        <div class="profile__top">
+                            <div class="profile__img">
+                                <div class="profile__img-cont m-img-cont">
+                                    <img src="http://via.placeholder.com/100x100" alt="">
+                                    <div class="profile__vip">
+                                        vip
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile__left">
+                                
+
+                                <div class="profile__left-top">
+                                    <div class="profile__title">Иванов Иван Иванович
+                                    </div>
+
+                                    <a href="#" class="profile__red">
+                                        {{Icon iconName="red"}}
+                                        Редактировать профиль
+                                    </a>
+                                </div>
+                                
+                                <div class="profile__face">Частное лицо</div>
+                                
+                                <div class="profile__info">
+                                    <div class="profile__item">
+                                        <b>Город:</b>
+                                        <p>Москва</p>
+                                    </div>
+
+                                    <div class="profile__item">
+                                        <b>Телефон:</b>
+                                        <p>8-995-567-45-34</p>
+                                    </div>
+
+                                    <div class="profile__item">
+                                        <b>E-mail:</b>
+                                        <p>ivanov@mail.ru</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile__bottom">
+                            <div class="profile__bottom-info">
+                                <div class="profile__info-title">
+                                    45
+                                </div>
+
+                                Завершенных заказов
+                            </div>
+
+                            <div class="profile__bottom-info">
+                                <div class="profile__info-title">
+                                    45
+                                </div>
+
+                                Завершенных заказов
+                            </div>
+
+                            <div class="profile__bottom-info">
+                                <div class="profile__info-title">
+                                    45
+                                </div>
+
+                                Завершенных заказов
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="messages">
+                        <div class="messages__title">
+                            Уведомления
+                        </div>
+
+                        <div class="messages__item">
+                            1. Оплатите 30% от заказа до окончания счетчика
+                            {{Icon iconName="close"}}
+                        </div>
+
+                        <div class="messages__item">
+                            1. Оплатите 30% от заказа до окончания счетчика
+                            {{Icon iconName="close"}}
+                        </div>
+
+                        <div class="messages__item">
+                            1. Оплатите 30% от заказа до окончания счетчика
+                            {{Icon iconName="close"}}
+                        </div>
+
+                        <div class="messages__item">
+                            1. Оплатите 30% от заказа до окончания счетчика
+                            {{Icon iconName="close"}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        {{> footer/footer}}
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+
+</html>

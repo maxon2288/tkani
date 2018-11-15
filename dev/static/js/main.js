@@ -3530,7 +3530,7 @@ $(document).ready(function(){
         });
     });
     
-    $('.form-sign').validate({
+    $('.form-sign, .form-profile').validate({
         rules: {
             mail: {
                 required: true,
@@ -3572,6 +3572,7 @@ $(document).ready(function(){
                 // processData: false,
                 // contentType: false,
                 success: function() {
+                    location.reload
                 }
             });
         },
@@ -3871,8 +3872,8 @@ $(document).ready(function(){
             values: [curX, xurY],
             slide: function( event, ui ) {
                 $( ".filter__price-result" ).text('Цена: ' + ui.values[ 0 ] + " - " + ui.values[ 1 ] + ' руб.' );
-                $(".input-ot").val(curX);
-                $(".input-do").val(curY);
+                $(".input-ot").val(ui.values[ 0 ]);
+                $(".input-do").val(ui.values[ 1 ]);
             },
             create: function(event, ui) {
                 $( ".filter__price-result" ).text( 'Цена: ' + curX+ " - " + xurY  + ' руб.');
@@ -3969,66 +3970,74 @@ $(document).ready(function(){
         });
     });
 
-    
 
     ///--------------------
     /// Калькулятор корзины
     ///--------------------
 
-    calculate();
-    $('.quantity input').change(function(){
-        var max = parseFloat($(this).attr('max'));
-        var min = parseFloat($(this).attr('min'));
-        var value = parseFloat($(this).val());
-        if(value >= max) {
-            $(this).val(max.toFixed(1));
-        }
-        if(value <= min) {
-            $(this).val(min.toFixed(1))
-        }
+    $('.quantity').each(function () {
+        var it = $(this);
         calculate();
+        it.find('input').change(function(){
+            var max = parseFloat($(this).attr('max'));
+            var min = parseFloat($(this).attr('min'));
+            var value = parseFloat($(this).val());
+            if(value >= max) {
+                $(this).val(max.toFixed(1));
+            }
+            if(value <= min) {
+                $(this).val(min.toFixed(1))
+            }
+    
+            calculate();
+    
+        });
+        it.find('.quantity-up').click(function(){
+            var max = parseFloat(it.find('input').attr('max'));
+            var min = parseFloat(it.find('input').attr('min'));
+            var step = parseFloat(it.find('input').attr('step'))
+            var value = parseFloat(it.find('input').val())
+    
+            value = parseFloat(value + step).toFixed(1);
+            if(value >= max) {
+                it.find('input').val(max);
+            } else if(value <= min) {
+                it.find('input').val(min)
+            } else {
+                it.find('input').val(value);
+            }
+            calculate();
+        })
+        it.find('.quantity-down').click(function(){
+            var max = parseFloat(it.find('input').attr('max'))
+            var min = parseFloat(it.find('input').attr('min'))
+            var step = parseFloat(it.find('input').attr('step'))
+            var value = parseFloat(it.find('input').val())
+    
+            value = parseFloat(value - step).toFixed(1);
+            if(value >= max) {
+                it.find('input').val(max);
+            } else if(value <= min) {
+                it.find('input').val(min)
+            } else {
+                it.find('input').val(value);
+            }
+            calculate();
+        })
+        function calculate() {
+            var price = parseFloat(it.find('input').closest('tr').data('price'))
+            var value = parseFloat(it.find('input').val())
+            it.closest('tr').find('.tabs__percent-30').html(parseFloat(price*value/100*30).toFixed(0) + ' руб.')
+            it.closest('tr').find('.tabs__percent-70').html(parseFloat(price*value/100*70).toFixed(0) + ' руб.')
+            it.closest('tr').find('.tabs__percent-100').html(parseFloat(price*value).toFixed(0) + ' руб.')
+            it.closest('table').find('.tabs__bottom-title span').html(parseFloat(price*value ).toFixed(0) + ' руб.')
+
+            it.closest('table').find('.tabs__result .tabs__percent-30').html(parseFloat(price*value/100*30).toFixed(0) + ' руб.')
+            it.closest('table').find('.tabs__result .tabs__percent-70').html(parseFloat(price*value/100*70).toFixed(0) + ' руб.')
+            it.closest('table').find('.tabs__result .tabs__percent-100').html(parseFloat(price*value/100*100).toFixed(0) + ' руб.')
+        }
+    })
 
     });
-    $('.quantity-up').click(function(){
-        var max = parseFloat($('.quantity input').attr('max'));
-        var min = parseFloat($('.quantity input').attr('min'));
-        var step = parseFloat($('.quantity input').attr('step'))
-        var value = parseFloat($('.quantity input').val())
-
-        value = parseFloat(value + step).toFixed(1);
-        if(value >= max) {
-            $('.quantity input').val(max);
-        } else if(value <= min) {
-            $('.quantity input').val(min)
-        } else {
-            $('.quantity input').val(value);
-        }
-        calculate();
-    })
-    $('.quantity-down').click(function(){
-        var max = parseFloat($('.quantity input').attr('max'))
-        var min = parseFloat($('.quantity input').attr('min'))
-        var step = parseFloat($('.quantity input').attr('step'))
-        var value = parseFloat($('.quantity input').val())
-
-        value = parseFloat(value - step).toFixed(1);
-        if(value >= max) {
-            $('.quantity input').val(max);
-        } else if(value <= min) {
-            $('.quantity input').val(min)
-        } else {
-            $('.quantity input').val(value);
-        }
-        calculate();
-    })
-    function calculate() {
-        var price = parseFloat($('.quantity input').closest('tr').data('price'))
-        var value = parseFloat($('.quantity input').val())
-
-        $('.tabs__percent-30').html(parseFloat(price*value/100*30).toFixed(1))
-        $('.tabs__percent-70').html(parseFloat(price*value/100*70).toFixed(1))
-        $('.tabs__percent-100').html(parseFloat(price*value).toFixed(1))
-    }
-})
 
 //# sourceMappingURL=main.js.map

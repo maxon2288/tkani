@@ -9805,6 +9805,16 @@ input[type=number] {
           justify-content: center;
 }
 
+.tkKit {
+  display: none;
+}
+
+.tkKit.vis {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .first {
   width: 100%;
   height: 100vh;
@@ -11147,5 +11157,3 @@ input[type=number] {
   color: #676767;
   line-height: 2.5;
 }
-
-/*# sourceMappingURL=main.css.map */

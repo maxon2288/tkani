@@ -101,9 +101,7 @@ $(document).ready(function(){
     
     $(".filter-submit").click(function() {
         $.ajax({
-    
-    
-            
+
             success: function() {
                 // location.reload;
             }
@@ -258,6 +256,14 @@ $(document).ready(function(){
             $(".more-link").removeClass("visible");
             $(".more-link input").removeClass('valid');
             $(".more-link input").removeClass('invalid');
+        }
+    });
+
+    $(".tkKit-input").change(function () {
+        if ($(this).val() === 'tkKit') {
+            $('.tkKit').addClass('vis');
+        } else {
+            $('.tkKit').removeClass('vis');
         }
     });
     
@@ -438,27 +444,26 @@ $(document).ready(function(){
     });
     
     new WOW().init();
-    
-    
+
     $(document).ready(function() {
-        var minX = 0;
-        var maxX = 1500;
         var curX = 300;
         var xurY = 900;
+        var minVal = $('.input-ot').data('min');
+        var maxVal = $('.input-do').data('max');
         $("#flat-slider").slider({
-            max: maxX,
-            min: minX,
+            min: minVal,
+            max: maxVal,
             range: true,
             values: [curX, xurY],
             slide: function( event, ui ) {
-                $( ".filter__price-result" ).text('Цена: ' + ui.values[ 0 ] + " - " + ui.values[ 1 ] + ' руб.' );
+                $( ".filter__price-result" ).text('Цена: ' + ui.values[ 0 ] +' руб. ' +  " - " + ui.values[ 1 ] + ' руб.' );
                 $(".input-ot").val(ui.values[ 0 ]);
                 $(".input-do").val(ui.values[ 1 ]);
             },
             create: function(event, ui) {
-                $( ".filter__price-result" ).text( 'Цена: ' + curX+ " - " + xurY  + ' руб.');
-                $(".input-ot").val(curX);
-                $(".input-do").val(curY);
+                $( ".filter__price-result" ).text( 'Цена: ' + curX+ ' руб. ' + " - "  + xurY  + ' руб.');
+                $(".input-ot").val(ui.values[ 0 ]);
+                $(".input-do").val(ui.values[ 1 ]);
             }
         });
     
@@ -619,3 +624,5 @@ $(document).ready(function(){
     })
 
     });
+
+    

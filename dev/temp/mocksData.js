@@ -150,9 +150,6 @@ __pages: [{
                 name: 'orders-3',
                 href: 'orders-3.html'
              },{
-                name: 'orders',
-                href: 'orders.html'
-             },{
                 name: 'payment',
                 href: 'payment.html'
              },{

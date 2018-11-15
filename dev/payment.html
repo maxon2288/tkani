@@ -154,12 +154,12 @@
                         <div class="header__right">
 
 
-                            <div class="search">
-                                <input class="search__field m-field">
-                                <a href="#">
+                            <form action="#" class="search">
+                                <input name="search" class="search__field m-field">
+                                <button href="#" class="search__button">
                                     <img src="../static/img/content/search.png" alt="">
-                                </a>
-                            </div>
+                                </button>
+                            </form>
 
                             <div class="sign">
                                 <div class="sign__icon">
@@ -1213,8 +1213,7 @@
                 </li>
                 <li><a href="#tab-1-2">Формирование  счета</a>
                 </li>
-                <li><a href="#tab-1-1">Оплата</a>
-                </li>
+                <div>Оплата</div>
             </ul>
 
             <div class="payment" id="tab-1-1">
@@ -1318,9 +1317,21 @@
 
 
                             <div class="payment__center-cont">
-                                <figure>
-                                    <img src="static/img/content/print.jpg" alt="">
-                                </figure>
+                                <div class="doc">
+                                    <table>
+                                        <b>ИП Кульков Алексей Сергеевич</b>
+                                        <p>г. Нижний Новгодо. Пт-р Кораблестроителей дом №33 квартира 10</p>
+                                        <tr>
+                                            <td>ИИН 47821390908</td>
+                                            <td rowspan="2"></td>
+                                            <td>Сч. № 980412309824109214</td>
+                                        </tr>
+                                        <tr>
+                                            Покупка
+                                            <br>ИП КУЛЬКОВ АЛЕКСЕЙ СЕРГЕЕВИЧ
+                                        </tr>
+                                    </table>
+                                </div>
 
                                 <div class="payment__checks">
 

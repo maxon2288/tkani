@@ -5,6 +5,11 @@ html, body
     font-family: 'Segoe UI'
     background-color: #e9eaec
 
+@media print
+    .first-container, .bread, .footer, .footer__copy, .payment-tab
+        display: none !important    
+    .doc
+        display: flex !important
 a 
     font-family: 'Segoe UI'
     text-decoration: none
@@ -333,7 +338,13 @@ a
         max-width: 100%
         height: auto
 
-    
+.search__button 
+    background-color: transparent
+    border: none
+    background-image: none
+    transition: 0.3s
+    &:hover 
+        opacity: 0.8
 .form, .form-reg
     width: 100%
 
@@ -1024,7 +1035,7 @@ a
     display: flex
     flex-direction: column
     width: 22.3%
-
+    padding-bottom: 10px
     
     @media screen and(max-width: 1023px)
         position: fixed
@@ -1143,6 +1154,7 @@ a
             width: 100%
     &__select-container
         display: flex
+        
     &__content
         width: 100% 
     &__top
@@ -1152,6 +1164,7 @@ a
         align-items: flex-start
         justify-content: space-between
         width: 100%
+        margin-bottom: 30px
         .form__radio
             width: 170px
     &__items
@@ -1756,13 +1769,14 @@ hr
     @media screen and(max-width: 1023px)
         flex-direction: column
         border-radius: 5px
-    li 
+    li , div
         width: 33.333333%
         display: flex
+        justify-content: center
+        align-items: center
         @media screen and(max-width: 1023px)
             width: 100%
-        a 
-            
+        a
             width: 100%
             height: 65px
             margin: 0
@@ -1775,12 +1789,26 @@ hr
             transition: 0.1s
             outline: none
             background-color: #d7d7d7
-            &:hover 
+            &:hover
                 background-color: transparent
         &.ui-state-active 
-            a 
-                background-color: transparent
-        
+            a , div
+                
+    div 
+        width: 33.33333%
+        height: 65px
+        margin: 0
+        padding: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        font-size: 20px
+        transition: 0.1s
+        outline: none
+        background-color: #d7d7d7
+        &:hover 
+            background-color: transparent
 .more-input 
     display: none
     &.visible 

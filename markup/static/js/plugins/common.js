@@ -295,9 +295,6 @@ $(document).ready(function(){
         hide: { effect: "fade", duration: 150 },
         show: { effect: "fade", duration: 150 },    
     });
-
-    
-    
     
     $(document).ready(function() {
         var start = $(".price-kg").html();
@@ -407,6 +404,15 @@ $(document).ready(function(){
     $(".messages__item svg").click(function() {
         $(this).parent(".messages__item").addClass('invisible')
     });
+
+    $('.filter__select select').change(function(){
+        var it = $(this);
+        $.ajax({
+            success: function() {
+                var val = it.val();
+            }
+        });
+    });
     
     
     $(document).ready(function() {
@@ -462,8 +468,6 @@ $(document).ready(function(){
             },
             create: function(event, ui) {
                 $( ".filter__price-result" ).text( 'Цена: ' + curX+ ' руб. ' + " - "  + xurY  + ' руб.');
-                $(".input-ot").val(ui.values[ 0 ]);
-                $(".input-do").val(ui.values[ 1 ]);
             }
         });
     

@@ -154,12 +154,12 @@
                         <div class="header__right">
 
 
-                            <div class="search">
-                                <input class="search__field m-field">
-                                <a href="#">
+                            <form action="#" class="search">
+                                <input name="search" class="search__field m-field">
+                                <button href="#" class="search__button">
                                     <img src="../static/img/content/search.png" alt="">
-                                </a>
-                            </div>
+                                </button>
+                            </form>
 
                             <div class="sign">
                                 <div class="sign__icon">
@@ -1383,7 +1383,7 @@
 
                         <div class="filter__buttons">
                             <button class="filter-submit filter__button m-button">Применить</button>
-                            <a href="#" class="filter__button m-button-gray">Сбросить</a>
+                            <a href="" class="filter__button m-button-gray">Сбросить</a>
                         </div>
                     </div>
 
@@ -1416,33 +1416,18 @@
                     <form action="/" class="filter__top">
 
 
-                        <div class="filter__select-container">
-                            <label class="form__radio">
-                                <input type="radio" name="radio" checked>
-                                <div></div>
-                                <p>Самые новые</p>
-                            </label>
-
-                            <label class="form__radio">
-                                <input type="radio" name="radio">
-                                <div></div>
-                                <p>Самые новые</p>
-                            </label>
-                        </div>
-
-
                         <div class="filter__select">
                             <div class="filter__select-text">
                                 Сортировать по:
                             </div>
 
                             <select class="form-select">
-                                <option value="1">Some option</option>
-                                <option value="1">Some option</option>
-                                <option value="1">Some option</option>
-                                <option value="2">Another option</option>
-                                <option value="3" disabled>A disabled option</option>
-                                <option value="4">Potato</option>
+                                <option value="1">Сначала низкие</option>
+                                <option value="2">Самые новые</option>
+                                <option value="3">Популярные</option>
+                                <option value="4">Сначала высокие</option>
+                                <option value="5">От а до я</option>
+                                <option value="6">От я до а</option>
                             </select>
                         </div>
                     </form>

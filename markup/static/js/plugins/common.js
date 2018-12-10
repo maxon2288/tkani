@@ -31,24 +31,24 @@ $(document).ready(function(){
     
         errorPlacement: function (error, element) {},
     
-        submitHandler: function() {
-            // var form_data = $(this).serialize(); //собераем все данные из формы
-            $.ajax({
-                // type: "POST", //Метод отправки
-                // url: '/mail.php', //путь до php фаила отправителя
-                // data: form_data,
-                // cache: false,
-                // processData: false,
-                // contentType: false,
-                success: function() {
-                    $("input, textarea").val('');
-                    $(".modal.modal-feedback, .overlay").addClass('visible');                
-                    setTimeout (function(){
-                        $(".modal.modal-feedback, .overlay").removeClass('visible');
-                     }, 3000);
-                }
-            });
-        },
+        // submitHandler: function() {
+        //     // var form_data = $(this).serialize(); //собераем все данные из формы
+        //     $.ajax({
+        //         // type: "POST", //Метод отправки
+        //         // url: '/mail.php', //путь до php фаила отправителя
+        //         // data: form_data,
+        //         // cache: false,
+        //         // processData: false,
+        //         // contentType: false,
+        //         success: function() {
+        //             $("input, textarea").val('');
+        //             $(".modal.modal-feedback, .overlay").addClass('visible');                
+        //             setTimeout (function(){
+        //                 $(".modal.modal-feedback, .overlay").removeClass('visible');
+        //              }, 3000);
+        //         }
+        //     });
+        // },
     });
     
     $('.form-reg').validate({
@@ -82,30 +82,30 @@ $(document).ready(function(){
     
         errorPlacement: function (error, element) {},
     
-        submitHandler: function() {
-            var form_data = $(this).serialize(); //собераем все данные из формы
-            $('input, textarea').val('');
-            $.ajax({
-                // type: "POST", //Метод отправки
-                // url: '/mail.php', //путь до php фаила отправителя
-                data: form_data,
-                // cache: false,
-                // processData: false,
-                // contentType: false,
-                success: function() {
-                    location.href = "thanx.html";
-                }
-            });
-        },
+        // submitHandler: function() {
+        //     var form_data = $(this).serialize(); //собераем все данные из формы
+        //     $('input, textarea').val('');
+        //     $.ajax({
+        //         // type: "POST", //Метод отправки
+        //         // url: '/mail.php', //путь до php фаила отправителя
+        //         data: form_data,
+        //         // cache: false,
+        //         // processData: false,
+        //         // contentType: false,
+        //         success: function() {
+        //             location.href = "thanx.html";
+        //         }
+        //     });
+        // },
     });
     
     $(".filter-submit").click(function() {
-        $.ajax({
+        // $.ajax({
 
-            success: function() {
-                // location.reload;
-            }
-        });
+        //     success: function() {
+        //         // location.reload;
+        //     }
+        // });
     });
     
     $('.form-sign, .form-profile').validate({
@@ -139,21 +139,21 @@ $(document).ready(function(){
     
         errorPlacement: function (error, element) {},
     
-        submitHandler: function() {
-            var form_data = $(this).serialize(); //собераем все данные из формы
-            $('input, textarea').val('');
-            $.ajax({
-                // type: "POST", //Метод отправки
-                // url: '/mail.php', //путь до php фаила отправителя
-                data: form_data,
-                // cache: false,
-                // processData: false,
-                // contentType: false,
-                success: function() {
-                    location.reload
-                }
-            });
-        },
+        // submitHandler: function() {
+        //     var form_data = $(this).serialize(); //собераем все данные из формы
+        //     $('input, textarea').val('');
+        //     $.ajax({
+        //         // type: "POST", //Метод отправки
+        //         // url: '/mail.php', //путь до php фаила отправителя
+        //         data: form_data,
+        //         // cache: false,
+        //         // processData: false,
+        //         // contentType: false,
+        //         success: function() {
+        //             location.reload
+        //         }
+        //     });
+        // },
     });
     
     // var canvas = document.getElementById("myCanvas");
@@ -296,31 +296,28 @@ $(document).ready(function(){
         show: { effect: "fade", duration: 150 },    
     });
     
-    $(document).ready(function() {
-        var start = $(".price-kg").html();
-        $(".price-result").html(start + " руб.");
-    });
+    
     
     $(".lightgallery").lightGallery();
     
     $(".tabs__delete").click(function() {
         var it = $(this);
-        $.ajax({
-            // type: "POST", //Метод отправки
-            // url: '/mail.php', //путь до php фаила отправителя
-            // cache: false,
-            // processData: false,
-            // contentType: false,
-            success: function() {
-                it.closest("tr").addClass('invisible');
-            }
-        });
+        // $.ajax({
+        //     // type: "POST", //Метод отправки
+        //     // url: '/mail.php', //путь до php фаила отправителя
+        //     // cache: false,
+        //     // processData: false,
+        //     // contentType: false,
+        //     success: function() {
+        //         it.closest("tr").addClass('invisible');
+        //     }
+        // });
     });
     
     var mySwiper = new Swiper('.deliv-slider', {
         speed: 500,
-        spaceBetween: 0,
-        slidesPerView:  "auto",
+        spaceBetween: 10,
+        slidesPerView:  4,
         grabCursor: true,
     });
     
@@ -467,7 +464,7 @@ $(document).ready(function(){
                 $(".input-do").val(ui.values[ 1 ]);
             },
             create: function(event, ui) {
-                $( ".filter__price-result" ).text( 'Цена: ' + curX+ ' руб. ' + " - "  + xurY  + ' руб.');
+                $( ".filter__price-result" ).text( 'Цена: ' + minVal+ ' руб. ' + " - "  + maxVal  + ' руб.');
             }
         });
     
@@ -530,23 +527,23 @@ $(document).ready(function(){
                 success: function(data){
                 }
             });
-        }
+        }   
     });
     $(".basket-index").html('0');
     
     $('.filter__item-button').click(function(event){
         event.preventDefault();
         
-        $.ajax({
-            // url: ajaxurl, // обработчик
-            // data: data, // данные
-            // type: 'POST', // тип запроса
-            success: function(data){
-                var val = parseInt($(".basket-index").html());
-                val++;
-                $(".basket-index").html(val);
-            }
-        });
+        // $.ajax({
+        //     // url: ajaxurl, // обработчик
+        //     // data: data, // данные
+        //     // type: 'POST', // тип запроса
+        //     success: function(data){
+        //         var val = parseInt($(".basket-index").html());
+        //         val++;
+        //         $(".basket-index").html(val);
+        //     }
+        // });
     });
     
     $(function () {
@@ -566,6 +563,7 @@ $(document).ready(function(){
 
     $('.quantity').each(function () {
         var it = $(this);
+        product();
         calculate();
         it.find('input').change(function(){
             var max = parseFloat($(this).attr('max'));
@@ -579,6 +577,7 @@ $(document).ready(function(){
             }
     
             calculate();
+            product();
     
         });
         it.find('.quantity-up').click(function(){
@@ -596,6 +595,7 @@ $(document).ready(function(){
                 it.find('input').val(value);
             }
             calculate();
+            product();
         })
         it.find('.quantity-down').click(function(){
             var max = parseFloat(it.find('input').attr('max'))
@@ -612,6 +612,7 @@ $(document).ready(function(){
                 it.find('input').val(value);
             }
             calculate();
+            product();
         })
         function calculate() {
             var price = parseFloat(it.find('input').closest('tr').data('price'))
@@ -625,8 +626,14 @@ $(document).ready(function(){
             it.closest('table').find('.tabs__result .tabs__percent-70').html(parseFloat(price*value/100*70).toFixed(0) + ' руб.')
             it.closest('table').find('.tabs__result .tabs__percent-100').html(parseFloat(price*value/100*100).toFixed(0) + ' руб.')
         }
+        function product() {
+            var kg = parseFloat($(".price-kg").html()).toFixed();
+            var i = parseFloat($(".price-i").val()).toFixed();
+            $(".price-result").text(kg * i + " руб.");
+        }
     })
 
+    $('.printButton').click(function() {
+        window.print()
     });
-
-    
+});

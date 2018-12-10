@@ -141,6 +141,9 @@ __pages: [{
                 name: 'news',
                 href: 'news.html'
              },{
+                name: 'ofer',
+                href: 'ofer.html'
+             },{
                 name: 'orders-1',
                 href: 'orders-1.html'
              },{
